@@ -1,0 +1,139 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+      {
+          "quantidade": 1,
+          "usuarios": [
+              {
+                  "nome": "Fulano da Silva",
+                  "email": "fulano@qa.com",
+                  "password": "teste",
+                  "administrador": "true",
+                  "_id": "0uxuPY0cbmQhpEz1"
+              }
+          ]
+      }
+  ],
+  "required": [
+      "quantidade",
+      "usuarios"
+  ],
+  "properties": {
+      "quantidade": {
+          "$id": "#/properties/quantidade",
+          "type": "integer",
+          "title": "The quantidade schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+              1
+          ]
+      },
+      "usuarios": {
+          "$id": "#/properties/usuarios",
+          "type": "array",
+          "title": "The usuarios schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": [],
+          "examples": [
+              [
+                  {
+                      "nome": "Fulano da Silva",
+                      "email": "fulano@qa.com",
+                      "password": "teste",
+                      "administrador": "true",
+                      "_id": "0uxuPY0cbmQhpEz1"
+                  }
+              ]
+          ],
+          "additionalItems": true,
+          "items": {
+              "$id": "#/properties/usuarios/items",
+              "anyOf": [
+                  {
+                      "$id": "#/properties/usuarios/items/anyOf/0",
+                      "type": "object",
+                      "title": "The first anyOf schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": {},
+                      "examples": [
+                          {
+                              "nome": "Fulano da Silva",
+                              "email": "fulano@qa.com",
+                              "password": "teste",
+                              "administrador": "true",
+                              "_id": "0uxuPY0cbmQhpEz1"
+                          }
+                      ],
+                      "required": [
+                          "nome",
+                          "email",
+                          "password",
+                          "administrador",
+                          "_id"
+                      ],
+                      "properties": {
+                          "nome": {
+                              "$id": "#/properties/usuarios/items/anyOf/0/properties/nome",
+                              "type": "string",
+                              "title": "The nome schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": "",
+                              "examples": [
+                                  "Fulano da Silva"
+                              ]
+                          },
+                          "email": {
+                              "$id": "#/properties/usuarios/items/anyOf/0/properties/email",
+                              "type": "string",
+                              "title": "The email schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": "",
+                              "examples": [
+                                  "fulano@qa.com"
+                              ]
+                          },
+                          "password": {
+                              "$id": "#/properties/usuarios/items/anyOf/0/properties/password",
+                              "type": "string",
+                              "title": "The password schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": "",
+                              "examples": [
+                                  "teste"
+                              ]
+                          },
+                          "administrador": {
+                              "$id": "#/properties/usuarios/items/anyOf/0/properties/administrador",
+                              "type": "string",
+                              "title": "The administrador schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": "",
+                              "examples": [
+                                  "true"
+                              ]
+                          },
+                          "_id": {
+                              "$id": "#/properties/usuarios/items/anyOf/0/properties/_id",
+                              "type": "string",
+                              "title": "The _id schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": "",
+                              "examples": [
+                                  "0uxuPY0cbmQhpEz1"
+                              ]
+                          }
+                      },
+                      "additionalProperties": true
+                  }
+              ]
+          }
+      }
+  },
+  "additionalProperties": true
+}
