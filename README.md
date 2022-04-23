@@ -59,51 +59,81 @@ $ git clone https://github.com/STC-TEAM-PROJECT/robot-api-stc.git
 
 ### Installation
 
+**IMPORTANT:**
+Use makefile commands to facilitate the processes, for example:
+
+> To install dependencies:
+
 - Install all dependencies via **requirements.txt**:
 
-> Install dependencies:
-
+__default, no makefile:__
 ```js
-$ cd ${HOME}/robot-api-stc && pip3 install -r requirements.txt
+$ pip3 install -r requirements.txt
 ```
 
-> Tips:
+__in that project, with the makefile:__
+```makefile
+$ make install
+```
+##### Tips:
 
-- Use your _requirements.txt_ to add or remove libs
+- Use your __requirements.txt__ to add or remove libs and install via __makefile__.
+
+
+> To clean your project:
+
+```makefile
+$ make clean
+```
+
+> To run serverest local (port: 3000):
+
+```makefile
+$ make run-serverest
+```
+
+##### Tips:
+
+- You may need to open another __terminal__ to run your tests.
 
 -----------------------
 
 ### How to test
 
-> To install repo dependencies:
-
-```js
-$ pip3 install -r requirements.txt
-```
-
 > To run all tests:
 
-```js
-$ robot .
+```makefile
+$ make run-all
 ```
 
 > To run all regression tests:
 
-```js
-$ robot -i @regression .
-```
-
-> To run all schemas tests:
-
-```js
-$ robot -i @schemas_tests .
+```makefile
+$ make run-regression
 ```
 
 > To run all integration tests:
 
-```js
-$ robot -i @integration_tests .
+```makefile
+$ make run-all-integration
 ```
+
+> To run all schema tests:
+
+```makefile
+$ make run-all-schema
+```
+
+> To run with the @your_tag
+
+```makefile
+$ make run-test
+```
+
+##### Tips:
+
+- You need to put the **@test** tag in your __test case__ or edit in makefile.
+
 
 -----------------------
 
@@ -127,9 +157,14 @@ $ robot -i @integration_tests .
 
 > To generate reports:
 
-```js
-$ robot -d ./logs .
+```makefile
+$ make run-all
 ```
+
+##### Tips:
+
+- **All tests** (commands) use the __report__ for better visualization of scenarios
+
 
 -----------------------
 
