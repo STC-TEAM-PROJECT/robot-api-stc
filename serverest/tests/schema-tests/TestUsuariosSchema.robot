@@ -3,7 +3,7 @@ Resource        ../../base.robot
 Documentation   User test for schema API
 
 *** Variables ***
-${USER_SCHEMA}        ${SCHEMAS}/usuarios/usuarios-schema.json
+${USER_SCHEMA}        ${SCHEMAS}/usuarios/usuarios_schema.json
 
 *** Test Cases ***
 Validate user API schema
