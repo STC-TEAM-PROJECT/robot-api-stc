@@ -13,17 +13,14 @@ run-serverest:
 run-all:
 	robot -d ./logs .
 
+run-regression:
+	robot -d ./logs -i @regression .
+
 run-all-integration:
 	robot -d ./logs -i @integration_tests ./serverest/tests/integration-tests
 
 run-all-schema:
 	robot -d ./logs -i @schema_tests ./serverest/tests/schema-tests
 
-run-test-integration:
-	robot -d ./logs -i @integration
-
-run-test-schema:
-	robot -d ./logs -i @schema
-
-run-regression:
-	robot -d ./logs -i @regression .
+run-test:
+	robot -d ./logs -i @test
