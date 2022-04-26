@@ -9,6 +9,6 @@ ${USER_SCHEMA}        ${SCHEMAS}/usuarios/usuarios_schema.json
 Validate user API schema
     [Tags]    @regression    @schema
     Search All Users
-    Should Be Equal As Numbers       ${response.status_code}    200
+    Should Be Equal As Strings       ${response.status_code}    200
     Validate Jsonschema From File    ${response.json()}         ${USER_SCHEMA}
    
