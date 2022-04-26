@@ -9,4 +9,4 @@ Search All Users
     ...                    headers=${headers}
 
     Log                    ${response}
-    Set Global Variable    ${response}
+    Set Test Variable      ${response}
