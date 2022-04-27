@@ -23,4 +23,4 @@ run-all-schema:
 	robot -d ./logs -i @schema_tests ./serverest/tests/schema-tests
 
 run-test:
-	robot -d ./logs -i @test
+	robot -d ./logs -i @test .
