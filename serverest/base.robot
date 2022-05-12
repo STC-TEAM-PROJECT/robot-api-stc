@@ -3,6 +3,7 @@ Library    RequestsLibrary
 Library    FakerLibrary
 Library    JsonValidator
 Resource   ./tests/integartion-tests/keywords/usuarios/UsuarioKW.robot
+Resource   ./tests/integartion-tests/keywords/produtos/ProdutoKW.robot
 
 *** Variables ***
 ${URL_LOCAL}                            http://localhost:3000
