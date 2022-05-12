@@ -1,0 +1,125 @@
+{
+    "$schema": "http://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+
+    ],
+    "properties": {
+        "quantidade": {
+            "type": "integer",
+            "default": 0,
+            "title": "The quantidade Schema",
+            "examples": [
+                2
+            ]
+        },
+        "usuarios": {
+            "type": "array",
+            "default": [],
+            "title": "The usuarios Schema",
+            "items": {
+                "type": "object",
+                "title": "A Schema",
+                "required": [
+                    "nome",
+                    "preco",
+                    "descricao",
+                    "quantidade",
+                    "_id"
+                ],
+                "properties": {
+                    "nome": {
+                        "type": "string",
+                        "title": "The nome Schema",
+                        "examples": [
+                            "Logitech MX Vertical",
+                            "Samsung 60 polegadas"
+                        ]
+                    },
+                    "preco": {
+                        "type": "integer",
+                        "title": "The preco Schema",
+                        "examples": [
+                            470,
+                            5240
+                        ]
+                    },
+                    "descricao": {
+                        "type": "string",
+                        "title": "The descricao Schema",
+                        "examples": [
+                            "Mouse",
+                            "TV"
+                        ]
+                    },
+                    "quantidade": {
+                        "type": "integer",
+                        "title": "The quantidade Schema",
+                        "examples": [
+                            381,
+                            49977
+                        ]
+                    },
+                    "_id": {
+                        "type": "string",
+                        "title": "The _id Schema",
+                        "examples": [
+                            "BeeJh5lz3k6kSIzA",
+                            "K6leHdftCeOJj8BJ"
+                        ]
+                    }
+                },
+                "examples": [{
+                    "nome": "Logitech MX Vertical",
+                    "preco": 470,
+                    "descricao": "Mouse",
+                    "quantidade": 381,
+                    "_id": "BeeJh5lz3k6kSIzA"
+                },
+                {
+                    "nome": "Samsung 60 polegadas",
+                    "preco": 5240,
+                    "descricao": "TV",
+                    "quantidade": 49977,
+                    "_id": "K6leHdftCeOJj8BJ"
+                }]
+            },
+            "examples": [
+                [{
+                    "nome": "Logitech MX Vertical",
+                    "preco": 470,
+                    "descricao": "Mouse",
+                    "quantidade": 381,
+                    "_id": "BeeJh5lz3k6kSIzA"
+                },
+                {
+                    "nome": "Samsung 60 polegadas",
+                    "preco": 5240,
+                    "descricao": "TV",
+                    "quantidade": 49977,
+                    "_id": "K6leHdftCeOJj8BJ"
+                }]
+            ]
+        }
+    },
+    "examples": [{
+        "quantidade": 2,
+        "usuarios": [{
+            "nome": "Logitech MX Vertical",
+            "preco": 470,
+            "descricao": "Mouse",
+            "quantidade": 381,
+            "_id": "BeeJh5lz3k6kSIzA"
+        },
+        {
+            "nome": "Samsung 60 polegadas",
+            "preco": 5240,
+            "descricao": "TV",
+            "quantidade": 49977,
+            "_id": "K6leHdftCeOJj8BJ"
+        }]
+    }]
+}
