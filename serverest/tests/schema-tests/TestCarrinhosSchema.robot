@@ -1,14 +1,14 @@
 *** Settings ***
 Resource        ../../base.robot
-Resource        ../integartion-tests/keywords/carrinhos/CarrinhoKW.robot
+
 Documentation   Car test for schema API
 
 *** Variables ***
-${CAR_SCHEMA}           ${SCHEMAS}/carrinhos/carrinhos-schema.json
+${CART_SCHEMA}           ${SCHEMAS}/carrinhos/carrinhos-schema.json
 
 *** Test Cases ***
 Validate car API schema
-    [Tags]    @regression
-    Search All Cars
+    [Tags]    @regression   @schema
+    Search All Carts
     Should Be Equal As Numbers       ${response.status_code}    200
-    Validate Jsonschema From File    ${response.json()}         ${CAR_SCHEMA}
+    Validate Jsonschema From File    ${response.json()}         ${CART_SCHEMA}
