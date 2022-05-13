@@ -4,6 +4,7 @@ Library    FakerLibrary
 Library    JsonValidator
 Resource   ./tests/integartion-tests/keywords/usuarios/UsuarioKW.robot
 Resource   ./tests/integartion-tests/keywords/produtos/ProdutoKW.robot
+Resource   ./tests/integration-tests/keywords/carrinhos/CarrinhoKW.robot
 
 *** Variables ***
 ${URL_LOCAL}                            http://localhost:3000
