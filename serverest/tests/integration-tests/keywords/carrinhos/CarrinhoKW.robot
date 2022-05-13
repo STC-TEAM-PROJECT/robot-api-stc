@@ -1,6 +1,6 @@
 *** Keywords ***
-Search All Cars
-    [Documentation]        Used to search for all existing cars.
+Search All Carts
+    [Documentation]        Used to search for all existing carts.
     ${headers}=            Create Dictionary
     ...                    content-type=application/json
 
