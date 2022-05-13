@@ -1,6 +1,5 @@
 *** Settings ***
 Resource        ../../base.robot
-
 Documentation   Car test for schema API
 
 *** Variables ***
