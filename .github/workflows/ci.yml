@@ -45,10 +45,11 @@ jobs:
           echo "::set-env name=REPOSITORY_OWNER::$OWNER"
 
           echo "::set-env name=REPOSITORY_NAME::$REPO"
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
       - name: Send report to commit
         uses: joonvena/robotframework-reporter-action@v0.1
         env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
           GH_ACCESS_TOKEN: '${{ secrets.TOKEN }}'
           REPO_OWNER: '${{ env.REPOSITORY_OWNER }}'
           COMMIT_SHA: '${{ github.sha }}'
