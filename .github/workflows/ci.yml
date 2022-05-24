@@ -5,7 +5,7 @@ name: robot-ci
     branches:
       - main
   workflow_dispatch: null
-  
+
 jobs:
   robot-api-tests:
     runs-on: ubuntu-latest
@@ -27,7 +27,7 @@ jobs:
   generate_report:
     if: always()
     needs:
-      - test
+      - robot-api-tests
     runs-on: ubuntu-latest
     steps:
       - name: Download logs
