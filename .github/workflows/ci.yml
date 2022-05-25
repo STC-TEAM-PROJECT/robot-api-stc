@@ -29,27 +29,6 @@ jobs:
     needs: [robot_api_tests_report] 
     runs-on: ubuntu-latest
     steps:
-      - name: Download artifacts
-        uses: actions/download-artifact@v1
-        with:
-          name: logs
-      - name: Get repository owner & name
-        env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-        run: |
-          export OWNER="$(echo "${{ github.repository }}" | awk -F / '{print $1}' | sed -e "s/:refs//")"
-          export REPO="$(echo "${{ github.repository }}" | awk -F / '{print $2}' | sed -e "s/:refs//")"
-          echo "::set-env name=REPOSITORY_OWNER::$OWNER"
-          echo "::set-env name=REPOSITORY_NAME::$REPO"
-      - name: Send logs to commit
-        uses: joonvena/robotframework-reporter-action@v0.1
-        env:
-          GH_ACCESS_TOKEN: ${{ secrets.TOKEN }}
-          REPO_OWNER: ${{ env.REPOSITORY_OWNER }}
-          COMMIT_SHA: ${{ github.sha }}
-          REPOSITORY: ${{ env.REPOSITORY_NAME }}
-          REPORT_PATH: ${{ github.workspace }}
-
       - name: Get allure history
         uses: actions/checkout@v2
         if: always()
@@ -57,12 +36,14 @@ jobs:
         with:
           ref: gh-pages
           path: gh-pages
+
       - name: Allure report action
         uses: simple-elf/allure-report-action@master
         if: always()
         with:
           allure_results: allure-results
           allure_history: allure-history
+
       - name: Deploy report to github pages
         if: always()
         uses: peaceiris/actions-gh-pages@v2
