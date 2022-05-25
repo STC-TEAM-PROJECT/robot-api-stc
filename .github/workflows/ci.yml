@@ -29,10 +29,6 @@ jobs:
     needs: [robot_api_tests] 
     runs-on: ubuntu-latest
     steps:
-      - name: Download logs
-        uses: actions/download-artifact@v1
-        with:
-          name: logs
       - name: Get repository owner & name
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: true
@@ -49,8 +45,18 @@ jobs:
           COMMIT_SHA: ${{ github.sha }}
           REPOSITORY: ${{ env.REPOSITORY_NAME }}
           REPORT_PATH: logs
-      - name: Deploy gh-pages
-        uses: JamesIves/github-pages-deploy-action@4.1.3
+
+  deploy_gh_pages:
+    needs: [generate_report]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download logs
+        uses: actions/download-artifact@v1
+        with:
+          name: logs
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.3.0
         with:
           branch: gh-pages
           folder: ${{ github.workspace }}/logs
