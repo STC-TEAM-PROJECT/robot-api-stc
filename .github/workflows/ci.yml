@@ -27,7 +27,7 @@ jobs:
   generate_report:
     if: always()
     needs:
-      - robot-api-tests
+      - robot_api_tests
     runs-on: ubuntu-latest
     steps:
       - name: Download logs
