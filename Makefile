@@ -17,10 +17,10 @@ run-regression:
 	robot -d ./logs -i @regression .
 
 run-all-integration:
-	robot -d ./logs -i @integration_tests ./serverest/tests/integration-tests
+	robot -d ./logs -i @integration ./serverest/tests/integration-tests
 
 run-all-schema:
-	robot -d ./logs -i @schema_tests ./serverest/tests/schema-tests
+	robot -d ./logs -i @schema ./serverest/tests/schema-tests
 
 run-test:
 	robot -d ./logs -i @test .
