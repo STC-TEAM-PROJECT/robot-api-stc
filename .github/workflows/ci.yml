@@ -48,7 +48,7 @@ jobs:
           REPO_OWNER: ${{ env.REPOSITORY_OWNER }}
           COMMIT_SHA: ${{ github.sha }}
           REPOSITORY: ${{ env.REPOSITORY_NAME }}
-          REPORT_PATH: logs/allure-reports
+          REPORT_PATH: ${{ github.workspace }}
 
       - name: Get allure history
         uses: actions/checkout@v2
