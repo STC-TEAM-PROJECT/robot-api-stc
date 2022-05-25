@@ -2,7 +2,7 @@ clean:
 	rm -fr .tox/
 	rm -f .coverage
 	rm -fr htmlcov/
-	rm -rf log* logs output* report*
+	rm -rf log* logs output* report* results*
 
 install:
 	pip3 install -r requirements.txt
@@ -24,3 +24,9 @@ run-all-schema:
 
 run-test:
 	robot -d ./logs -i @test .
+
+run-test-report:
+	robot --listener 'allure_robotframework;./logs/allure-reports' .
+
+run-report:
+	allure serve ./logs/allure-reports

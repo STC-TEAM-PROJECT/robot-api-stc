@@ -1,4 +1,5 @@
 robotframework
+robotframework-allure
 robotframework-requests
 robotframework-faker
 robotframework-jsonvalidator

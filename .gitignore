@@ -20,6 +20,7 @@ env-robot-e2e-regression/
 tests/end-to-end/ui/app/
 .pabotsuitenames
 log/
+logs/
 log_android_pabot/
 log_local/
 *file.pdf
