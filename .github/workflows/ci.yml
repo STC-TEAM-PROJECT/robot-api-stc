@@ -7,7 +7,7 @@ name: robot-ci
   workflow_dispatch: null
 
 jobs:
-  build:
+  robot_integration_tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -15,12 +15,7 @@ jobs:
         run: make clean
       - name: Install dependencies
         run: make install
-  
-  robot_all_tests:
-    needs: [build]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run all tests
+      - name: Run tests
         run: make run-all
       - name: Upload results
         uses: actions/upload-artifact@v1
@@ -29,9 +24,9 @@ jobs:
           name: logs
           path: ${{ github.workspace }}/logs
 
-  generate_report_and_deploy_gh_pages:
+  generate_report:
     if: always()
-    needs: [robot_all_tests] 
+    needs: [robot_api_tests] 
     runs-on: ubuntu-latest
     steps:
       - name: Download logs
