@@ -1,5 +1,5 @@
-name: robot-ci
-'on':
+name: ROBOT-CI
+on:
   pull_request: null
   push:
     branches:
@@ -29,13 +29,6 @@ jobs:
     needs: [robot_api_tests] 
     runs-on: ubuntu-latest
     steps:
-      - name: Get logs history
-        uses: actions/checkout@v2
-        if: always()
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
       - name: Download artifacts
         uses: actions/download-artifact@v1
         with:
@@ -56,10 +49,3 @@ jobs:
           COMMIT_SHA: ${{ github.sha }}
           REPOSITORY: ${{ env.REPOSITORY_NAME }}
           REPORT_PATH: logs 
-      - name: Deploy logs to gh-pages
-        if: always()
-        uses: peaceiris/actions-gh-pages@v2
-        env:
-          PERSONAL_TOKEN: ${{ secrets.TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: logs
