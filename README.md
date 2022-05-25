@@ -1,7 +1,9 @@
 # ROBOT-API-STC
 -----------------------
 
-[![SERVREST API](https://img.shields.io/badge/API-ServeRest-brightgreen)](https://github.com/PauloGoncalvesBH/ServeRest/)
+[![SERVREST-API](https://img.shields.io/badge/API-ServeRest-brightgreen)](https://github.com/PauloGoncalvesBH/ServeRest/)
+[![ROBOT-CI](https://github.com/STC-TEAM-PROJECT/robot-api-stc/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/STC-TEAM-PROJECT/robot-api-stc/actions/workflows/ci.yml)
+[![LOGS](https://img.shields.io/badge/REPORT-DEPLOYED-brightgreen)](https://ulucasfraga.github.io/cypress_api_for_studies/)
 
 Repository with examples for STC team studies on automated **robotframework** __API__ and __Schema__ tests and other libs:
 
