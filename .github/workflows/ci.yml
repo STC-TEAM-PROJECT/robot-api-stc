@@ -51,6 +51,7 @@ jobs:
           REPORT_PATH: logs 
 
   deploy_gh_pages:
+    needs: [generate_report] 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
