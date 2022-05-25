@@ -50,13 +50,8 @@ jobs:
           REPOSITORY: ${{ env.REPOSITORY_NAME }}
           REPORT_PATH: logs/allure-reports
 
-  deploy_report:
-    if: always()
-    needs: [generate_report] 
-    runs-on: ubuntu-latest
-    steps:
       - name: Get allure history
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         if: always()
         continue-on-error: true
         with:
@@ -68,10 +63,10 @@ jobs:
         with:
           allure_results: allure-results
           allure_history: allure-history
-      - name: Deploy report to gh-pages
+      - name: Deploy report to github pages
         if: always()
         uses: peaceiris/actions-gh-pages@v2
         env:
           PERSONAL_TOKEN: ${{ secrets.TOKEN }}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ${{ github.workspace }}/logs/allure-reports
+          PUBLISH_DIR: allure-history
