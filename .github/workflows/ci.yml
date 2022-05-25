@@ -32,7 +32,7 @@ jobs:
         uses: simple-elf/allure-report-action@master
         if: always()
         with:
-          allure_results: ${{ github.workspace }}/logs/allure-reports
+          allure_results: ${{ github.workspace }}/logs
 
       - name: Deploy report to gh-pages
         if: always()
@@ -40,4 +40,4 @@ jobs:
         env:
           PERSONAL_TOKEN: ${{ secrets.TOKEN }}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ${{ github.workspace }}/logs/allure-reports
+          PUBLISH_DIR: ${{ github.workspace }}/logs

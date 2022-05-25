@@ -26,7 +26,7 @@ run-test:
 	robot -d ./logs -i @test .
 
 run-test-report:
-	robot --listener 'allure_robotframework;./logs/allure-reports' .
+	robot --listener 'allure_robotframework;./logs' .
 
 run-report:
-	allure serve ./logs/allure-reports
+	allure serve ./logs
