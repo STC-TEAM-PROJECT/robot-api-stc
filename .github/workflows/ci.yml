@@ -16,12 +16,12 @@ jobs:
       - name: Install dependencies
         run: make install
   
-  robot_schema_tests:
+  robot_all_tests:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
-      - name: Run schema tests
-        run: make run-all-schema
+      - name: Run all tests
+        run: make run-all
       - name: Upload results
         uses: actions/upload-artifact@v1
         if: always()
@@ -31,7 +31,7 @@ jobs:
 
   generate_report_and_deploy_gh_pages:
     if: always()
-    needs: [robot_schema_tests] 
+    needs: [robot_all_tests] 
     runs-on: ubuntu-latest
     steps:
       - name: Download logs
