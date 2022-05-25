@@ -29,6 +29,10 @@ jobs:
     needs: [robot_api_tests] 
     runs-on: ubuntu-latest
     steps:
+      - name: Download logs
+        uses: actions/download-artifact@v1
+        with:
+          name: logs
       - name: Get repository owner & name
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: true
@@ -50,11 +54,6 @@ jobs:
     needs: [generate_report]
     runs-on: ubuntu-latest
     steps:
-      - name: Download logs
-        uses: actions/download-artifact@v1
-        with:
-          name: logs
-
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.0
         with:
