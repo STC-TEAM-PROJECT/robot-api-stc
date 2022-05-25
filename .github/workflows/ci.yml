@@ -33,9 +33,9 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: logs
+      - name: Get repository owner & name
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-      - name: Get repository owner & name
         run: |
           export OWNER="$(echo "${{ github.repository }}" | awk -F / '{print $1}' | sed -e "s/:refs//")"
           export REPO="$(echo "${{ github.repository }}" | awk -F / '{print $2}' | sed -e "s/:refs//")"
