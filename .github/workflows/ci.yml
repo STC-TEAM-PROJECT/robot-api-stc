@@ -15,19 +15,6 @@ jobs:
         run: make clean
       - name: Install dependencies
         run: make install
-
-  robot_integration_tests:
-    needs: [build]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run integration tests
-        run: make run-all-integration
-      - name: Upload results
-        uses: actions/upload-artifact@v1
-        if: always()
-        with:
-          name: logs
-          path: ${{ github.workspace }}/logs
   
   robot_schema_tests:
     needs: [build]
