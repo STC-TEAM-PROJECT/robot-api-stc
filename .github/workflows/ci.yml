@@ -1,24 +1,51 @@
 name: robot-ci
-
-on:
+'on':
+  pull_request: null
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches:
+      - main
+  workflow_dispatch: null
 
 jobs:
-  build:
-
+  robot_api_tests:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: Clean project
-      run: make clean
-      
-    - name: Install dependencies
-      run: make install
-      
-    - name: Run tests
-      run: make run-all
+      - uses: actions/checkout@v3
+      - name: Clean project
+        run: make clean
+      - name: Install dependencies
+        run: make install
+      - name: Run tests
+        run: make run-all
+      - name: Upload results
+        uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: Logs
+          path: '${{ github.workspace }}/logs'
+
+  generate_report:
+    if: always()
+    needs: [robot_api_tests] 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download logs
+        uses: actions/download-artifact@v1
+        with:
+          name: logs
+      - name: Get repository owner & name
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+        run: |
+          export OWNER="$(echo "${{ github.repository }}" | awk -F / '{print $1}' | sed -e "s/:refs//")"
+          export REPO="$(echo "${{ github.repository }}" | awk -F / '{print $2}' | sed -e "s/:refs//")"
+          echo "::set-env name=REPOSITORY_OWNER::$OWNER"
+          echo "::set-env name=REPOSITORY_NAME::$REPO"
+      - name: Send logs to commit
+        uses: joonvena/robotframework-reporter-action@v0.1
+        env:
+          GH_ACCESS_TOKEN: ${{ secrets.TOKEN }}
+          REPO_OWNER: ${{ env.REPOSITORY_OWNER }}
+          COMMIT_SHA: ${{ github.sha }}
+          REPOSITORY: ${{ env.REPOSITORY_NAME }}
+          REPORT_PATH: logs
