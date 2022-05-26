@@ -7,7 +7,7 @@ on:
   workflow_dispatch: null
 
 jobs:
-  robot_api_tests_report:
+  robot_schema_tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -18,26 +18,29 @@ jobs:
         run: make install
 
       - name: Run tests
-        run: make run-test-report
+        run: make run-all-schema
 
-      - name: Get allure report
+  generate_report:
+    needs: [robot_schema_tests]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get allure history
         uses: actions/checkout@v2
         if: always()
         continue-on-error: true
         with:
           ref: gh-pages
           path: gh-pages
-
       - name: Allure report action
         uses: simple-elf/allure-report-action@master
         if: always()
         with:
-          allure_results: ${{ github.workspace }}/logs
-
+          allure_results: allure_results
+          allure_history: allure_history
       - name: Deploy report to gh-pages
         if: always()
         uses: peaceiris/actions-gh-pages@v2
         env:
           PERSONAL_TOKEN: ${{ secrets.TOKEN }}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ${{ github.workspace }}/logs
+          PUBLISH_DIR: allure_history
