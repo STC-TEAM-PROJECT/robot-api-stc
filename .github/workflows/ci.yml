@@ -20,13 +20,20 @@ jobs:
       - name: Run schema tests
         run: make run-all-schema
 
-      - name: Generate report
-        run: make allure-report
-
   generate_report:
     needs: [robot_schema_tests]
     runs-on: ubuntu-latest
     steps:
+      - name: Collect allure files and generate allure_report folder
+        run: |
+            allure generate output/
+
+      - name: Publishing allure_artifact to gh-actions
+        uses: actions/upload-artifact@v2
+        with:
+          name: allure_report
+          path: allure_report
+
       - name: Get allure history
         uses: actions/checkout@v2
         if: always()
