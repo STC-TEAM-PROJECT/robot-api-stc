@@ -38,13 +38,6 @@ jobs:
           allure_report: allure_report
           allure_history: allure_history
 
-      - name: Allure report action
-        uses: simple-elf/allure-report-action@master
-        if: always()
-        with:
-          allure_results: allure_results
-          allure_history: allure_history
-
       - name: Test marketplace action
         uses: simple-elf/allure-report-action@master
         if: always()
