@@ -361,9 +361,3 @@ node_modules/
 temp/
 cypress/reports/
 cypress/videos/
-allure-report/
-# allure-results/
-allure-history/
-allure_report/
-# allure_results/
-allure_history/
