@@ -20,13 +20,13 @@ jobs:
       - name: Run schema tests
         run: make run-all-schema
 
+      - name: Generate report
+        run: make allure-report
+
   generate_report:
     needs: [robot_schema_tests]
     runs-on: ubuntu-latest
     steps:
-      - name: Generate report
-        run: make allure-report
-
       - name: Get allure history
         uses: actions/checkout@v2
         if: always()
