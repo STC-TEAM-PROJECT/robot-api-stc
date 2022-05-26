@@ -1,4 +1,4 @@
-name: robot-ci
+name: ROBOT-CI
 on:
   pull_request: null
   push:
