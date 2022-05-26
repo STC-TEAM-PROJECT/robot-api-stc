@@ -7,6 +7,7 @@ Search All Users
     Create Session         serveRest            ${URL_DEV}        verify=True
     ${response}=           GET On Session       serveRest         /usuarios
     ...                    headers=${headers}
+    ...                    expected_status=any
 
     Log                    ${response}
     Set Test Variable      ${response}

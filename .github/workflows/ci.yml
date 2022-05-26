@@ -18,6 +18,8 @@ jobs:
         run: make install
 
       - name: Run schema tests
+        if: always()
+        continue-on-error: true
         run: make run-all-schema
 
   generate_report:
