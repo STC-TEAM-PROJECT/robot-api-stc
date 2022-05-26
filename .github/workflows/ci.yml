@@ -35,13 +35,14 @@ jobs:
       - name: Allure report in gh-action
         uses: simple-elf/allure-report-action@master
         if: always()
+        id: allure_report
         with:
           allure_results: ./allure_results
           gh_pages: gh-pages
           allure_report: allure_report
           allure_history: allure_history
 
-      - name: Deploy report to gh-page
+      - name: Deploy report to gh-pages
         if: always()
         uses: peaceiris/actions-gh-pages@v2
         env:
