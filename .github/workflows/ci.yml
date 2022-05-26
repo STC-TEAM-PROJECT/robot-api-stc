@@ -28,20 +28,9 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Test local action
-        uses: ./allure-report-action
-        if: always()
-        id: allure_report
-        with:
-          allure_results: ./allure_results
-          gh_pages: gh-pages
-          allure_report: allure_report
-          allure_history: allure_history
-
       - name: Test marketplace action
         uses: simple-elf/allure-report-action@master
         if: always()
-        id: allure_report
         with:
           allure_results: ./allure_results
           gh_pages: gh-pages
