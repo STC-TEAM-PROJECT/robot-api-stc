@@ -10,7 +10,7 @@ jobs:
   robot_schema_tests:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@latest
+      - uses: actions/checkout@v3
       - name: Clean project
         run: make clean
 
@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get allure history
-        uses: actions/checkout@latest
+        uses: actions/checkout@v3
         if: always()
         continue-on-error: true
         with:
@@ -43,7 +43,7 @@ jobs:
 
       - name: Deploy report to gh-pages
         if: always()
-        uses: peaceiris/actions-gh-pages@latest
+        uses: peaceiris/actions-gh-pages@v3
         env:
           PERSONAL_TOKEN: ${{ secrets.TOKEN }}
           PUBLISH_BRANCH: gh-pages
