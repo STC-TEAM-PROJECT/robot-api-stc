@@ -20,10 +20,6 @@ jobs:
       - name: Run schema tests
         run: make run-all-schema
 
-  generate_report:
-    needs: [robot_schema_tests]
-    runs-on: ubuntu-latest
-    steps:
       - name: Get allure history
         uses: actions/checkout@v2
         if: always()
