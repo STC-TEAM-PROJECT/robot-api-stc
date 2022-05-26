@@ -20,8 +20,12 @@ jobs:
       - name: Run schema tests
         run: make run-all-schema
 
+  generate_report:
+    needs: [robot_schema_tests]
+    runs-on: ubuntu-latest
+    steps:
       - name: Get allure history
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         if: always()
         continue-on-error: true
         with:
@@ -39,7 +43,7 @@ jobs:
 
       - name: Deploy report to gh-pages
         if: always()
-        uses: peaceiris/actions-gh-pages@v2
+        uses: peaceiris/actions-gh-pages@v3
         env:
           PERSONAL_TOKEN: ${{ secrets.TOKEN }}
           PUBLISH_BRANCH: gh-pages
