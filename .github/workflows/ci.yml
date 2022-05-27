@@ -22,15 +22,13 @@ jobs:
       - name: Run schema tests
         if: always()
         run: make run-all-schema
-        env:
-            ROBOT_REPORTS_DIR: ${{ github.workspace }}/allure-results
         continue-on-error: true
 
-      - name: Upload test results
+      - name: Upload test reports
         uses: actions/upload-artifact@v1
         if: always()
         with:
-          name: reports
+          name: allure-results
           path: ${{ github.workspace }}/allure-results
 
   generate_report:
@@ -42,6 +40,7 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: allure-results
+
       - name: Get repository owner & name
         run: |
             export OWNER="$(echo "${{ github.repository }}" | awk -F / '{print $1}' | sed -e "s/:refs//")"
