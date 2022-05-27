@@ -9,7 +9,7 @@ on:
 
 jobs:
   robot_schema_tests:
-    name: Run schema tests
+    name: Run tests and generate allure report
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -24,12 +24,6 @@ jobs:
         run: make run-all-schema
         continue-on-error: true
 
-  generate_report:
-    name: Generate report tests
-    needs: [robot_schema_tests]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
       - name: Get allure history
         uses: actions/checkout@v2
         if: always()
