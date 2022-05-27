@@ -25,7 +25,11 @@ jobs:
         continue-on-error: true
 
       - name: Upload allure report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v1
+        with:
+          name: allure-results
+          path: allure-results
+          retention-days: 7
 
   generate_report:
     name: Generate report
@@ -33,7 +37,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download allure report
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v1
+        with:
+          name: allure-results
 
       - name: Get allure history
         uses: actions/checkout@v2
