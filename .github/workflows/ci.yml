@@ -29,7 +29,6 @@ jobs:
         with:
           name: allure-results
           path: allure-results
-          retention-days: 7
 
   generate_report:
     name: Generate report
