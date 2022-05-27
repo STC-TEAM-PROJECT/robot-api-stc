@@ -26,8 +26,6 @@ jobs:
 
       - name: Upload allure report
         uses: actions/upload-artifact@v3
-        with:
-          retention-days: 7
 
   generate_report:
     name: Generate report
