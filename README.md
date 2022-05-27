@@ -3,7 +3,7 @@
 
 [![SERVREST-API](https://img.shields.io/badge/API-ServeRest-brightgreen)](https://github.com/PauloGoncalvesBH/ServeRest/)
 [![ROBOT-CI](https://github.com/STC-TEAM-PROJECT/robot-api-stc/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/STC-TEAM-PROJECT/robot-api-stc/actions/workflows/ci.yml)
-[![LOGS](https://img.shields.io/badge/REPORT-DEPLOYED-brightgreen)](https://ulucasfraga.github.io/cypress_api_for_studies/)
+[![REPORT-DEPLOYED](https://img.shields.io/badge/REPORT-DEPLOYED-brightgreen)](https://stc-team-project.github.io/robot-api-stc/)
 
 Repository with examples for STC team studies on automated **robotframework** __API__ and __Schema__ tests and other libs:
 
@@ -34,6 +34,7 @@ Repository with examples for STC team studies on automated **robotframework** __
   - [How to test](#how-to-test)
   - [Tested endpoints](#tested-endpoints)
   - [Report](#report)
+  - [CI](#ci)
   - [Support](#support)
   - [License](#license)
 
@@ -148,24 +149,49 @@ $ make run-test
 - [ ] Carrinhos
 
 > All features tested for schemas:
-- [ ] Login
 - [x] Usuários
-- [ ] Produtos
-- [ ] Carrinhos
+- [x] Produtos
+- [x] Carrinhos
 
 -----------------------
 
 ### Report
 
-> To generate reports:
+> To generate the reports:
 
 ```makefile
-$ make run-all
+$ make run-test-report
+$ make allure-report
+```
+
+> To open the reports:
+
+```makefile
+$ make run-test-report
+$ make allure-server
+```
+
+> To clean the reports:
+
+```makefile
+$ make allure-clean
 ```
 
 ##### Tips:
 
 - **All tests** (commands) use the __report__ for better visualization of scenarios
+
+
+### CI
+
+> Explain:
+
+The `ROBOT-CI` follow these steps:
+- lint for robotframework
+- run schema_tests
+- run integration_tests
+- upload the artifact (in zip file)
+- generate report and deploy on github pages: https://stc-team-project.github.io/robot-api-stc/
 
 
 -----------------------
