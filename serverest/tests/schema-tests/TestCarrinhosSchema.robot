@@ -9,5 +9,5 @@ ${CART_SCHEMA}           ${SCHEMAS}/carrinhos/carrinhos-schema.json
 Validate car API schema
     [Tags]    @regression   @schema
     Search All Carts
-    Should Be Equal As Numbers       ${response.status_code}    400
+    Should Be Equal As Numbers       ${response.status_code}    200
     Validate Jsonschema From File    ${response.json()}         ${CART_SCHEMA}

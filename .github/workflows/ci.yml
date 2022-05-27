@@ -1,31 +1,36 @@
-name: allure-python-robotframework
+name: ROBOT-CI
 
 on:
+  pull_request: null
   push:
-    branches-ignore:
-      - '!main'
+    branches:
+      - main
+  workflow_dispatch: null
 
 jobs:
-  autotests:
-    name: Run tests and generate Allure Report
+  robot_schema_tests:
+    name: Run schema tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
-      - name: Set up Python 3.x
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
+      - name: Clean project
+        run: make clean
 
       - name: Install dependencies
         run: make install
 
-      - name: Run Test
+      - name: Run schema tests
         if: always()
         run: make run-all-schema
         continue-on-error: true
 
-      - name: Get Allure history
+  generate_report:
+    name: Generate report tests
+    needs: [robot_schema_tests]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get allure history
         uses: actions/checkout@v2
         if: always()
         continue-on-error: true
@@ -33,17 +38,16 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Allure Report action from marketplace
+      - name: Allure report gh-actions
         uses: simple-elf/allure-report-action@master
         if: always()
-        #id: allure-report
         with:
           allure_results: allure-results
           #gh_pages: gh-pages
           #allure_report: allure-report
           allure_history: allure-history
 
-      - name: Deploy report to Github Pages
+      - name: Deploy report to gh-pages
         if: always()
         uses: peaceiris/actions-gh-pages@v2
         env:
