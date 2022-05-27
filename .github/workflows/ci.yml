@@ -70,12 +70,6 @@ jobs:
         uses: simple-elf/allure-report-action@master
         if: always()
         with:
-          name: allure-results
-
-      - name: Allure report gh-actions
-        uses: simple-elf/allure-report-action@master
-        if: always()
-        with:
           allure_results: allure-results
           #gh_pages: gh-pages
           # allure_report: allure-report
