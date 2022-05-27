@@ -187,7 +187,7 @@ Access on: [GH-PAGES](https://stc-team-project.github.io/robot-api-stc/)
 
 > example:
 
-[![GH-PAGES](https://imgur.com/zJCmIfF)](https://stc-team-project.github.io/robot-api-stc/)
+[![GH-PAGES](https://i.imgur.com/zJCmIfF.png)](https://stc-team-project.github.io/robot-api-stc/)
 
 ### CI
 
