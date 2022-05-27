@@ -24,37 +24,26 @@ jobs:
         run: make run-all-schema
         continue-on-error: true
 
-      - name: Upload test reports
-        uses: actions/upload-artifact@v1
-        if: always()
-        continue-on-error: true
+      - name: Upload allure report
+        uses: actions/upload-artifact@v3
         with:
           name: allure-results
-          path: ${{ github.workspace }}/allure-results
+          path: allure-results
+          retention-days: 7
 
   generate_report:
     name: Generate report
     needs: [robot_schema_tests]
     runs-on: ubuntu-latest
     steps:
-      - name: Download reports
-        uses: actions/download-artifact@v1
+      - name: Download allure report
+        uses: actions/download-artifact@v3
         with:
           name: allure-results
-
-      - name: Get repository owner & name
-        env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-        run: |
-            export OWNER="$(echo "${{ github.repository }}" | awk -F / '{print $1}' | sed -e "s/:refs//")"
-            export REPO="$(echo "${{ github.repository }}" | awk -F / '{print $2}' | sed -e "s/:refs//")"
-            echo "::set-env name=REPOSITORY_OWNER::$OWNER"
-            echo "::set-env name=REPOSITORY_NAME::$REPO"
 
       - name: Get allure history
         uses: actions/checkout@v2
         if: always()
-        continue-on-error: true
         with:
           ref: gh-pages
           path: gh-pages
@@ -65,7 +54,7 @@ jobs:
         with:
           allure_results: allure-results
           #gh_pages: gh-pages
-          # allure_report: allure-report
+          allure_report: allure-report
           allure_history: allure-history
 
       - name: Deploy report to gh-pages
