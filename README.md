@@ -179,8 +179,15 @@ $ make allure-clean
 
 ##### Tips:
 
-- **All tests** (commands) use the __report__ for better visualization of scenarios
+- **All tests** (commands) use the __report__ for better visualization of scenarios. 
 
+##### To view report:
+
+Access on: [GH-PAGES](https://stc-team-project.github.io/robot-api-stc/)
+
+> example:
+
+[![GH-PAGES](https://imgur.com/zJCmIfF)](https://stc-team-project.github.io/robot-api-stc/)
 
 ### CI
 
