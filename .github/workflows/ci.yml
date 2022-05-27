@@ -1,30 +1,29 @@
-name: ROBOT-CI
+name: allure-python-robotframework
+
 on:
-  pull_request: null
   push:
-    branches:
-      - main
-  workflow_dispatch: null
+    branches-ignore:
+      - '!main'
 
 jobs:
-  robot_schema_tests:
+  autotests:
+    name: Run tests and generate Allure Report
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Clean project
-        run: make clean
+      - uses: actions/checkout@v2
+
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
 
       - name: Install dependencies
         run: make install
 
-      - name: Run schema tests
+      - name: Run Test
+        if: always()
         run: make run-all-schema
-
-  generate_report:
-    needs: [robot_schema_tests]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
+        continue-on-error: true
 
       - name: Get Allure history
         uses: actions/checkout@v2
@@ -34,20 +33,20 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Allure report action
+      - name: Allure Report action from marketplace
         uses: simple-elf/allure-report-action@master
         if: always()
+        #id: allure-report
         with:
           allure_results: allure-results
-          gh_pages: gh-pages
-          allure_report: allure-report
+          #gh_pages: gh-pages
+          #allure_report: allure-report
           allure_history: allure-history
-          keep_reports: 20
 
-      - name: Deploy report to gh-pages
+      - name: Deploy report to Github Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v2
         env:
-          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PERSONAL_TOKEN: ${{ secrets.TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
