@@ -50,15 +50,6 @@ jobs:
             echo "::set-env name=REPOSITORY_OWNER::$OWNER"
             echo "::set-env name=REPOSITORY_NAME::$REPO"
 
-      - name: Send report to commit
-        uses: joonvena/robotframework-reporter-action@v0.1
-        env:
-          GH_ACCESS_TOKEN: ${{ secrets.TOKEN }}
-          REPO_OWNER: ${{ env.REPOSITORY_OWNER }}
-          COMMIT_SHA: ${{ github.sha }}
-          REPOSITORY: ${{ env.REPOSITORY_NAME }}
-          REPORT_PATH: ${{ github.workspace }}/logs
-
       - name: Get allure history
         uses: actions/checkout@v2
         if: always()
