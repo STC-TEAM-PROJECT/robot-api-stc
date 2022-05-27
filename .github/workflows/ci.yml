@@ -27,8 +27,6 @@ jobs:
       - name: Upload allure report
         uses: actions/upload-artifact@v3
         with:
-          name: allure-results
-          path: allure-results
           retention-days: 7
 
   generate_report:
@@ -38,8 +36,6 @@ jobs:
     steps:
       - name: Download allure report
         uses: actions/download-artifact@v3
-        with:
-          name: allure-results
 
       - name: Get allure history
         uses: actions/checkout@v2
