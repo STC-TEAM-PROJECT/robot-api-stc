@@ -59,6 +59,7 @@ jobs:
           REPORT_PATH: allure-results
 
       - name: Get allure history
+        uses: actions/checkout@v2
         if: always()
         continue-on-error: true
         with:
