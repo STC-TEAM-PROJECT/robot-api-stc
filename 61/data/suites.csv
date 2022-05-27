@@ -1,4 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Thu May 26 22:40:33 GMT 2022","Thu May 26 22:40:33 GMT 2022","112","","Schema-Tests","TestProdutosSchema","","","Validate product API schema",""
-"passed","Thu May 26 22:40:33 GMT 2022","Thu May 26 22:40:33 GMT 2022","200","","Schema-Tests","TestCarrinhosSchema","","","Validate car API schema",""
-"passed","Thu May 26 22:40:33 GMT 2022","Thu May 26 22:40:34 GMT 2022","122","","Schema-Tests","TestUsuariosSchema","","","Validate user API schema",""
