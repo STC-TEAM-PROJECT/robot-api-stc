@@ -12,7 +12,7 @@ Search All Products
     Set Test Variable      ${response}
 
 Search Products By Id In The URL
-    [Documentation]        Used to search for id existing products.
+    [Documentation]        Used to search _id in URL.
     [Arguments]            ${product_id}
     ${headers}=            Create Dictionary
     ...                    content-type=application/json
@@ -26,7 +26,7 @@ Search Products By Id In The URL
     Set Test Variable      ${response}
 
 Search Products By Parameters
-    [Documentation]        Used to search for params existing products.
+    [Documentation]        Used to search params in URL.
     [Arguments]            ${params}=${empty}   ${others_params}=${empty}
     ${headers}=            Create Dictionary
     ...                    content-type=application/json
