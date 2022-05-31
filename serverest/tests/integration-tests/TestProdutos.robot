@@ -5,11 +5,11 @@ Documentation   Product test for API
 
 *** Test Cases ***
 Successfully validating product
-    [Tags]    @regression   
+    [Tags]    @regression
     Search All Products
     Should Be Equal As Strings          ${response.status_code}                         200
-    Set Test Variable                   ${quantidade}                                   ${response.json()["quantidade"]}
-    Should Be Equal As Strings          ${response.json()["quantidade"]}                ${quantidade}
+    Set Test Variable                   ${quantity}                                   ${response.json()["quantidade"]}
+    Should Be Equal As Strings          ${response.json()["quantidade"]}              ${quantity}
 
 Successfully validating product by ID in the URL
     [Tags]    @regression   
@@ -66,3 +66,8 @@ Successfully validating that the price must be an integer
     Should Be Equal As Strings          ${response.status_code}                          400
     Should Be Equal As Strings          ${response.json()["preco"]}                    preco deve ser um inteiro
 
+Unsuccessfully validating product by Description And Name
+    [Tags]    @regression   
+    Search Products By Parameters       nome=Samsung 60 polegadas   descricao=incorrect                   
+    Should Be Equal As Strings          ${response.status_code}                          200
+    Should Be Equal As Strings          ${response.json()["quantidade"]}                 0
