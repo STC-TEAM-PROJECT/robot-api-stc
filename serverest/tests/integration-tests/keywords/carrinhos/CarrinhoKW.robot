@@ -7,6 +7,7 @@ Search All Carts
     Create Session         serveRest            ${URL_DEV}        verify=True
     ${response}=           GET On Session       serveRest         /carrinhos
     ...                    headers=${headers}
+    ...                    expected_status=any
 
     Log                    ${response}
     Set Global Variable    ${response}

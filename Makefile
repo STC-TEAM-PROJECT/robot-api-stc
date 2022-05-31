@@ -1,4 +1,4 @@
-clean:
+clean: allure-clean
 	rm -fr .tox/
 	rm -f .coverage
 	rm -fr htmlcov/
@@ -17,10 +17,25 @@ run-regression:
 	robot -d ./logs -i @regression .
 
 run-all-integration:
-	robot -d ./logs -i @integration_tests ./serverest/tests/integration-tests
+	robot -d ./logs -i @integration ./serverest/tests/integration-tests
 
 run-all-schema:
-	robot -d ./logs -i @schema_tests ./serverest/tests/schema-tests
+	robot -d ./logs --listener 'allure_robotframework:allure-results' -i @schema ./serverest/tests/schema-tests
 
 run-test:
 	robot -d ./logs -i @test .
+
+run-test-report:
+	robot -d ./logs --listener 'allure_robotframework:allure-results' .
+
+allure-report:
+	allure generate allure-results --clean -o allure-report
+
+allure-server:
+	allure serve allure-results
+
+allure-history:
+	mv -f allure-report/history allure-results/history && rm -r allure-report || true
+
+allure-clean:
+	rm -r allure-* allure_* || true
