@@ -1,12 +1,16 @@
 *** Keywords ***
 Login
     [Documentation]        used to login.
+    [Arguments]            ${email}     ${password}
     ${headers}=            Create Dictionary
     ...                    content-type=application/json
+    ${body}=               Create Dictionary
+    ...                    email=${email}
+    ...                    password=${password}
 
     Create Session         serveRest            ${URL_DEV}        verify=True
     ${response}=           POST On Session      serveRest         /login
-    ...                    data={"email": "fulano@qa.com", "password": "teste"}
+    ...                    json=${body}
     ...                    headers=${headers}
     ...                    expected_status=any
 
