@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Jun 03 16:18:24 GMT 2022","Fri Jun 03 16:18:25 GMT 2022","104","","Schema-Tests","TestProdutosSchema","","","Validate products API",""
+"passed","Fri Jun 03 16:18:24 GMT 2022","Fri Jun 03 16:18:24 GMT 2022","185","","Schema-Tests","TestCarrinhosSchema","","","Validate car API schema",""
+"passed","Fri Jun 03 16:18:25 GMT 2022","Fri Jun 03 16:18:25 GMT 2022","149","","Schema-Tests","TestUsuariosSchema","","","Validate user API schema",""
