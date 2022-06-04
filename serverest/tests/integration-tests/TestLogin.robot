@@ -13,7 +13,7 @@ Successfully login
     Should Be Equal As Strings          ${response.json()["authorization"]}        ${authorization}
 
 Unsuccessfully login
-    [Tags]    @regression   @test
-    Login                               invalido@qa.com   teste
+    [Tags]    @regression
+    Login                               invalid@qa.com   teste
     Should Be Equal As Strings          ${response.status_code}                    401
     Should Be Equal As Strings          ${response.json()["message"]}              Email e/ou senha inválidos
