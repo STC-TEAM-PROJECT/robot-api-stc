@@ -17,7 +17,7 @@ run-regression:
 	robot -d ./logs -i @regression .
 
 run-all-integration:
-	robot -d ./logs -i @integration ./serverest/tests/integration-tests
+	robot -d ./logs --listener 'allure_robotframework:allure-results' -i @integration ./serverest/tests/integration-tests
 
 run-all-schema:
 	robot -d ./logs --listener 'allure_robotframework:allure-results' -i @schema ./serverest/tests/schema-tests

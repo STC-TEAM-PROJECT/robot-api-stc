@@ -25,6 +25,26 @@ jobs:
         with:
           name: allure-results
           path: allure-results
+  
+  robot_integration_tests:
+    name: Robot Integration Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Run Tests
+        if: always()
+        run: make run-all-integration
+        continue-on-error: true
+
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v1
+        with:
+          name: allure-results
+          path: allure-results
 
   generate_report:
     name: Generate Report
