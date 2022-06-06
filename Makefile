@@ -5,7 +5,7 @@ clean: allure-clean
 	rm -rf log* logs output* report*
 
 install:
-	pip3 install -r requirements.txt
+	pip3 freeze > requirements.txt
 
 run-serverest:
 	npx serverest -t 600000 -p 3000
