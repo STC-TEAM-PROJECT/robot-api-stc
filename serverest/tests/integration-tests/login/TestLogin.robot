@@ -3,7 +3,6 @@ Resource        ./login_base.robot
 Documentation   Login test for API
 Force Tags      @login
 
-
 *** Test Cases ***
 Successfully login
     [Tags]    @regression
