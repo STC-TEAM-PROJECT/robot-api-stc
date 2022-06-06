@@ -1,53 +1,54 @@
 name: ROBOT-CI
 
 on:
-  pull_request: null
   push:
-    branches:
-      - main
-  workflow_dispatch: null
+    branches: [main]
+  pull_request:
 
 jobs:
   robot_schema_tests:
-    name: Run schema tests
+    name: Robot Schema Tests
     runs-on: ubuntu-latest
     steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.0
+        with:
+          access_token: ${{ github.GH_TOKEN }}
+
       - uses: actions/checkout@v2
-      - name: Clean project
-        run: make clean
 
-      - name: Install dependencies
-        run: make install
+      - name: Setup
+        uses: ./.github/actions/setup
 
-      - name: Run schema tests
+      - name: Run Tests
         if: always()
         run: make run-all-schema
         continue-on-error: true
 
-      - name: Upload allure report
+      - name: Upload Allure Report
         uses: actions/upload-artifact@v1
         with:
           name: allure-results
           path: allure-results
 
   generate_report:
-    name: Generate report
+    name: Generate Report
     needs: [robot_schema_tests]
     runs-on: ubuntu-latest
     steps:
-      - name: Download allure report
+      - name: Download Allure Report
         uses: actions/download-artifact@v1
         with:
           name: allure-results
 
-      - name: Get allure history
+      - name: Get Allure History
         uses: actions/checkout@v2
         if: always()
         with:
           ref: gh-pages
           path: gh-pages
 
-      - name: Allure report gh-actions
+      - name: Allure Report gh-actions
         uses: simple-elf/allure-report-action@master
         if: always()
         with:
@@ -55,7 +56,7 @@ jobs:
           allure_report: allure-report
           allure_history: allure-history
 
-      - name: Deploy report to gh-pages
+      - name: Deploy Report to gh-pages
         if: always()
         uses: peaceiris/actions-gh-pages@v2
         env:
