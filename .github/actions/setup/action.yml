@@ -1,4 +1,4 @@
-name: Setup
+name: setup
 description: Setup Python version and install dependencies
 
 runs:
@@ -10,7 +10,7 @@ runs:
         python-version: '3.9'
         cache: 'pip'
 
-    - name: Install dependencies
+    - name: install dependencies
       run: make install
       shell: bash
       
