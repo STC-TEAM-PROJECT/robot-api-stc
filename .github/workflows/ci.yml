@@ -20,7 +20,7 @@ jobs:
         run: make run-all-schema
         continue-on-error: true
 
-      - name: upload Allure report
+      - name: upload allure report
         uses: actions/upload-artifact@v1
         with:
           name: allure-results
