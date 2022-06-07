@@ -143,7 +143,7 @@ $ make run-test
 ### Tested endpoints
 
 > All features tested for integration:
-- [ ] Login
+- [x] Login
 - [ ] Usuários
 - [ ] Produtos
 - [ ] Carrinhos
