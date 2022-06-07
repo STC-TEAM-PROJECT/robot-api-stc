@@ -47,7 +47,7 @@ jobs:
           path: allure-results
 
   generate_report:
-    name: Generate report
+    name: generate report
     needs: [robot_schema_tests, robot_integration_tests]
     runs-on: ubuntu-latest
     steps:
