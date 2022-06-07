@@ -1,7 +1,7 @@
 *** Settings ***
 Resource        ./login_base.robot
 Documentation   Login test for API
-Force Tags      @login
+Force Tags      @integration    @login
 
 *** Test Cases ***
 Successfully login
