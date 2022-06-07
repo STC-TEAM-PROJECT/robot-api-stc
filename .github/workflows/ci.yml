@@ -27,7 +27,7 @@ jobs:
           path: allure-results
   
   robot_integration_tests:
-    name: Robot integration tests
+    name: robot integration tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
