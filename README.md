@@ -1,11 +1,12 @@
 # ROBOT-API-STC
+
 -----------------------
 
 [![SERVREST-API](https://img.shields.io/badge/API-ServeRest-brightgreen)](https://github.com/PauloGoncalvesBH/ServeRest/)
 [![ROBOT-CI](https://github.com/STC-TEAM-PROJECT/robot-api-stc/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/STC-TEAM-PROJECT/robot-api-stc/actions/workflows/ci.yml)
 [![REPORT-DEPLOYED](https://img.shields.io/badge/REPORT-DEPLOYED-brightgreen)](https://stc-team-project.github.io/robot-api-stc/)
 
-Repository with examples for STC team studies on automated **robotframework** __API__ and __Schema__ tests and other libs:
+Repository with examples for STC team studies on automated **robotframework** **API** and **Schema** tests and other libs:
 
 - robot
 - requests
@@ -28,15 +29,21 @@ Repository with examples for STC team studies on automated **robotframework** __
 
 > Index `README`.
 
-  - [Prerequisites](#prerequisites)
-  - [Configurations](#configurations)
-  - [Installation](#installation)
-  - [How to test](#how-to-test)
-  - [Tested endpoints](#tested-endpoints)
-  - [Report](#report)
-  - [CI](#ci)
-  - [Support](#support)
-  - [License](#license)
+- [ROBOT-API-STC](#robot-api-stc)
+  - [Context table](#context-table)
+    - [Prerequisites](#prerequisites)
+    - [Configurations](#configurations)
+    - [Installation](#installation)
+      - [Tips](#tips)
+    - [How to test](#how-to-test)
+      - [Tips: Run tests](#tips-run-tests)
+    - [Tested endpoints](#tested-endpoints)
+    - [Report](#report)
+      - [Tips: Run report](#tips-run-report)
+        - [To view report](#to-view-report)
+    - [CI](#ci)
+    - [Supports](#supports)
+    - [License](#license)
 
 -----------------------
 
@@ -55,7 +62,7 @@ Repository with examples for STC team studies on automated **robotframework** __
 > Clone project:
 
 ```js
-$ git clone https://github.com/STC-TEAM-PROJECT/robot-api-stc.git
+git clone https://github.com/STC-TEAM-PROJECT/robot-api-stc.git
 ```
 
 -----------------------
@@ -69,86 +76,94 @@ Use makefile commands to facilitate the processes, for example:
 
 - Install all dependencies via **requirements.txt**:
 
-__default, no makefile:__
+**default, no makefile:**
+
 ```js
-$ pip3 install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
-__in that project, with the makefile:__
+**in that project, with the makefile:**
+
 ```makefile
-$ make install
+make install
 ```
-##### Tips:
 
-- Use your __requirements.txt__ to add or remove libs and install via __makefile__.
+#### Tips
 
+- Use your **requirements.txt** to add or remove libs and install via **makefile**.
 
 > To clean your project:
 
 ```makefile
-$ make clean
+make clean
 ```
-
-> To run serverest local (port: 3000):
-
-```makefile
-$ make run-serverest
-```
-
-##### Tips:
-
-- You may need to open another __terminal__ to run your tests.
 
 -----------------------
 
 ### How to test
 
+> To run serverest local (port: 3000):
+
+```makefile
+make run-serverest
+```
+
 > To run all tests:
 
 ```makefile
-$ make run-all
+env=dev make run-all
+env=local make run-all
 ```
 
 > To run all regression tests:
 
 ```makefile
-$ make run-regression
+env=dev make run-regression
+env=local make run-regression
 ```
 
 > To run all integration tests:
 
 ```makefile
-$ make run-all-integration
+env=dev make run-all-integration
+env=local make run-all-integration
 ```
 
 > To run all schema tests:
 
 ```makefile
-$ make run-all-schema
+env=dev make run-all-schema
+env=local make run-all-schema
 ```
 
 > To run with the @your_tag
 
 ```makefile
-$ make run-test
+env=dev make run-test
+env=local make run-test
 ```
 
-##### Tips:
+#### Tips: Run tests
 
-- You need to put the **@test** tag in your __test case__ or edit in makefile.
+- You may need to open another **terminal** to run your tests.
 
+- You need to choose a environments for tests: `env=dev` or `env=local`
+
+- You need to put the **@any-tag** in your **test case** or edit in makefile.
 
 -----------------------
 
 ### Tested endpoints
 
 > All features tested for integration:
+
 - [x] Login
 - [ ] Usuários
 - [ ] Produtos
 - [ ] Carrinhos
 
 > All features tested for schemas:
+
 - [x] Usuários
 - [x] Produtos
 - [x] Carrinhos
@@ -160,28 +175,34 @@ $ make run-test
 > To generate the reports:
 
 ```makefile
-$ make run-test-report
-$ make allure-report
+env=dev make run-test-report
+make allure-report
+
+env=local make run-test-report
+make allure-report
 ```
 
 > To open the reports:
 
 ```makefile
-$ make run-test-report
-$ make allure-server
+env=dev make run-test-report
+make allure-server
+
+env=local make run-test-report
+make allure-server
 ```
 
 > To clean the reports:
 
 ```makefile
-$ make allure-clean
+make allure-clean
 ```
 
-##### Tips:
+#### Tips: Run report
 
-- **All tests** (commands) use the __report__ for better visualization of scenarios. 
+- **All tests** (commands) use the **report** for better visualization of scenarios.
 
-##### To view report:
+##### To view report
 
 Access on: [GH-PAGES](https://stc-team-project.github.io/robot-api-stc/)
 
@@ -194,15 +215,14 @@ Access on: [GH-PAGES](https://stc-team-project.github.io/robot-api-stc/)
 > Explain:
 
 The `ROBOT-CI` follow these steps:
+
 - lint for robotframework
 - run schema_tests
 - run integration_tests
 - upload the artifact (in zip file)
-- generate report and deploy on github pages: https://stc-team-project.github.io/robot-api-stc/
-
+- generate report and deploy on github pages: <https://stc-team-project.github.io/robot-api-stc/>
 
 -----------------------
-
 
 ### Supports
 
