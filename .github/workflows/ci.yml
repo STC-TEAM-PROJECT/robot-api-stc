@@ -17,7 +17,7 @@ jobs:
 
       - name: Run tests
         if: always()
-        run: make run-all-schema
+        run: env=local make run-all-schema
         continue-on-error: true
 
       - name: Upload Allure report
@@ -35,9 +35,12 @@ jobs:
       - name: Setup project
         uses: ./.github/actions/setup
 
+      - name: Start ServeRest locally
+        run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
+
       - name: Run tests
         if: always()
-        run: make run-all-integration
+        run: env=local make run-all-integration
         continue-on-error: true
 
       - name: Upload Allure report
@@ -64,7 +67,7 @@ jobs:
           path: gh-pages
 
       - name: Allure report gh-actions
-        uses: simple-elf/allure-report-action@master
+        uses: simple-elf/allure-report-action@v2
         if: always()
         with:
           allure_results: allure-results
