@@ -11,22 +11,22 @@ run-serverest:
 	npx serverest -t 600000 -p 3000
 
 run-all:
-	robot -d ./logs .
+	robot -d ./logs -V ./env/$(env).yaml .
 
 run-regression:
-	robot -d ./logs -i @regression .
+	robot -d ./logs -i @regression -V ./env/$(env).yaml .
 
 run-all-integration:
-	robot -d ./logs --listener 'allure_robotframework:allure-results' -i @integration ./serverest/tests/integration-tests
+	robot -d ./logs --listener 'allure_robotframework:allure-results' -i @integration -V ./env/$(env).yaml ./serverest/tests/integration-tests
 
 run-all-schema:
-	robot -d ./logs --listener 'allure_robotframework:allure-results' -i @schema ./serverest/tests/schema-tests
+	robot -d ./logs --listener 'allure_robotframework:allure-results' -i @schema -V ./env/$(env).yaml ./serverest/tests/schema-tests
 
 run-test:
-	robot -d ./logs -i @test .
+	robot -d ./logs -i @test -V ./env/$(env).yaml .
 
 run-test-report:
-	robot -d ./logs --listener 'allure_robotframework:allure-results' .
+	robot -d ./logs --listener 'allure_robotframework:allure-results' -V ./env/$(env).yaml .
 
 allure-report:
 	allure generate allure-results --clean -o allure-report
