@@ -1,0 +1,392 @@
+{
+  "uid" : "1738ea5001f77688",
+  "name" : "Login with a non-exists email",
+  "fullName" : "Integration-Tests.Login.TestLogin.Login with a non-exists email",
+  "historyId" : "ce8e6642552dd8fdc6651e516b56216e",
+  "time" : {
+    "start" : 1655163905017,
+    "stop" : 1655163905034,
+    "duration" : 17
+  },
+  "status" : "failed",
+  "statusMessage" : "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+  "flaky" : false,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "steps" : [ {
+      "name" : "LoginKW.Login",
+      "time" : {
+        "start" : 1655163905017,
+        "stop" : 1655163905031,
+        "duration" : 14
+      },
+      "status" : "failed",
+      "statusMessage" : "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+      "steps" : [ {
+        "name" : "BuiltIn.Create Dictionary",
+        "time" : {
+          "start" : 1655163905018,
+          "stop" : 1655163905019,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "d65589d7f2411df2",
+          "name" : "Keyword Log",
+          "source" : "d65589d7f2411df2.html",
+          "type" : "text/html",
+          "size" : 75
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "content-type=application/json"
+        } ],
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true,
+        "stepsCount" : 0
+      }, {
+        "name" : "BuiltIn.Create Dictionary",
+        "time" : {
+          "start" : 1655163905019,
+          "stop" : 1655163905020,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "e31f2de536bd5461",
+          "name" : "Keyword Log",
+          "source" : "e31f2de536bd5461.html",
+          "type" : "text/html",
+          "size" : 91
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "email=${email}"
+        }, {
+          "name" : "arg2",
+          "value" : "password=${password}"
+        } ],
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true,
+        "stepsCount" : 0
+      }, {
+        "name" : "RequestsLibrary.Create Session",
+        "time" : {
+          "start" : 1655163905021,
+          "stop" : 1655163905022,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "6b958bee2682e25e",
+          "name" : "Keyword Log",
+          "source" : "6b958bee2682e25e.html",
+          "type" : "text/html",
+          "size" : 219
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "serveRest"
+        }, {
+          "name" : "arg2",
+          "value" : "${BASE_URL}"
+        }, {
+          "name" : "arg3",
+          "value" : "verify=True"
+        } ],
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true,
+        "stepsCount" : 0
+      }, {
+        "name" : "RequestsLibrary.POST On Session",
+        "time" : {
+          "start" : 1655163905022,
+          "stop" : 1655163905029,
+          "duration" : 7
+        },
+        "status" : "failed",
+        "statusMessage" : "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "c2da30bd734e37c8",
+          "name" : "Keyword Log",
+          "source" : "c2da30bd734e37c8.html",
+          "type" : "text/html",
+          "size" : 140
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "serveRest"
+        }, {
+          "name" : "arg2",
+          "value" : "/login"
+        }, {
+          "name" : "arg3",
+          "value" : "json=${body}"
+        }, {
+          "name" : "arg4",
+          "value" : "headers=${headers}"
+        }, {
+          "name" : "arg5",
+          "value" : "expected_status=any"
+        } ],
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true,
+        "stepsCount" : 0
+      }, {
+        "name" : "BuiltIn.Log",
+        "time" : {
+          "start" : 1655163905030,
+          "stop" : 1655163905030,
+          "duration" : 0
+        },
+        "status" : "failed",
+        "statusMessage" : "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${response}"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true,
+        "stepsCount" : 0
+      }, {
+        "name" : "BuiltIn.Set Test Variable",
+        "time" : {
+          "start" : 1655163905030,
+          "stop" : 1655163905031,
+          "duration" : 1
+        },
+        "status" : "failed",
+        "statusMessage" : "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${response}"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${NON_EXISTING_EMAIL}"
+      }, {
+        "name" : "arg2",
+        "value" : "${EXISTING_PASSWORD}"
+      } ],
+      "attachmentsCount" : 4,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 6
+    }, {
+      "name" : "BuiltIn.Should Be Equal As Numbers",
+      "time" : {
+        "start" : 1655163905032,
+        "stop" : 1655163905032,
+        "duration" : 0
+      },
+      "status" : "failed",
+      "statusMessage" : "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${response.status_code}"
+      }, {
+        "name" : "arg2",
+        "value" : "401"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "BuiltIn.Should Be Equal As Strings",
+      "time" : {
+        "start" : 1655163905032,
+        "stop" : 1655163905033,
+        "duration" : 1
+      },
+      "status" : "failed",
+      "statusMessage" : "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${response.json()['message']}"
+      }, {
+        "name" : "arg2",
+        "value" : "${MSG_WRONG_EMAIL_OR_PASS}"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 4,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 9
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Integration-Tests"
+  }, {
+    "name" : "suite",
+    "value" : "Login"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "framework",
+    "value" : "robotframework"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "host",
+    "value" : "fv-az447-649"
+  }, {
+    "name" : "thread",
+    "value" : "default-f55e86ca-1e9a-4d4e-83ea-bbf077594be5"
+  }, {
+    "name" : "tag",
+    "value" : "@integration"
+  }, {
+    "name" : "tag",
+    "value" : "@login"
+  }, {
+    "name" : "tag",
+    "value" : "@regression"
+  }, {
+    "name" : "tag",
+    "value" : "@integration"
+  }, {
+    "name" : "tag",
+    "value" : "@login"
+  }, {
+    "name" : "tag",
+    "value" : "@regression"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 8,
+        "unknown" : 0,
+        "total" : 9
+      },
+      "items" : [ {
+        "uid" : "89d55036ad541a22",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/133//#testresult/89d55036ad541a22",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654691311731,
+          "stop" : 1654691311843,
+          "duration" : 112
+        }
+      }, {
+        "uid" : "e8ac1f2c1936d604",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/132//#testresult/e8ac1f2c1936d604",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560904180,
+          "stop" : 1654560904262,
+          "duration" : 82
+        }
+      }, {
+        "uid" : "60d0385442343884",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/130//#testresult/60d0385442343884",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560782489,
+          "stop" : 1654560782602,
+          "duration" : 113
+        }
+      }, {
+        "uid" : "2d4ffb3ad89dc4d",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/128//#testresult/2d4ffb3ad89dc4d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560499933,
+          "stop" : 1654560500017,
+          "duration" : 84
+        }
+      }, {
+        "uid" : "dee0122c90862c3d",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/127//#testresult/dee0122c90862c3d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560396832,
+          "stop" : 1654560396948,
+          "duration" : 116
+        }
+      }, {
+        "uid" : "ccb4baa7cabb00ca",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/126//#testresult/ccb4baa7cabb00ca",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560334896,
+          "stop" : 1654560334975,
+          "duration" : 79
+        }
+      }, {
+        "uid" : "1841b8fb80ab35a2",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/125//#testresult/1841b8fb80ab35a2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560245903,
+          "stop" : 1654560246009,
+          "duration" : 106
+        }
+      }, {
+        "uid" : "6deb992fbb859011",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/123//#testresult/6deb992fbb859011",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654559686003,
+          "stop" : 1654559686123,
+          "duration" : 120
+        }
+      } ]
+    },
+    "tags" : [ "@integration", "@login", "@regression" ]
+  },
+  "source" : "1738ea5001f77688.json",
+  "parameterValues" : [ ]
+}

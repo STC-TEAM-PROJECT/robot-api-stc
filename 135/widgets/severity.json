@@ -1,0 +1,111 @@
+[ {
+  "uid" : "1fc1891fa44c98a9",
+  "name" : "Login with a blank email and password",
+  "time" : {
+    "start" : 1655163905165,
+    "stop" : 1655163905181,
+    "duration" : 16
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "4a674fc511d9a78c",
+  "name" : "Login with just the blank email",
+  "time" : {
+    "start" : 1655163905125,
+    "stop" : 1655163905140,
+    "duration" : 15
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "3d273534228c31b3",
+  "name" : "Validate products API",
+  "time" : {
+    "start" : 1655163891469,
+    "stop" : 1655163892084,
+    "duration" : 615
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "901ef34ab3d410ba",
+  "name" : "Login with a non-exists email and password",
+  "time" : {
+    "start" : 1655163905043,
+    "stop" : 1655163905062,
+    "duration" : 19
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "1738ea5001f77688",
+  "name" : "Login with a non-exists email",
+  "time" : {
+    "start" : 1655163905017,
+    "stop" : 1655163905034,
+    "duration" : 17
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "cc38034233c93593",
+  "name" : "Login with a non-exists password",
+  "time" : {
+    "start" : 1655163905073,
+    "stop" : 1655163905091,
+    "duration" : 18
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "3418beca253bd6f5",
+  "name" : "Successfully login",
+  "time" : {
+    "start" : 1655163904953,
+    "stop" : 1655163905003,
+    "duration" : 50
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "26da23bbdc36525c",
+  "name" : "Validate car API schema",
+  "time" : {
+    "start" : 1655163890825,
+    "stop" : 1655163891459,
+    "duration" : 634
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "960a8a0d353541b0",
+  "name" : "Validate user API schema",
+  "time" : {
+    "start" : 1655163892093,
+    "stop" : 1655163892708,
+    "duration" : 615
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "acdbd67ef12fd5a6",
+  "name" : "Login with just the blank password",
+  "time" : {
+    "start" : 1655163905146,
+    "stop" : 1655163905160,
+    "duration" : 14
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "9a2cf4049c7bff24",
+  "name" : "Login with an invalid email",
+  "time" : {
+    "start" : 1655163905099,
+    "stop" : 1655163905120,
+    "duration" : 21
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]

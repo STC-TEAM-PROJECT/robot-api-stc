@@ -1,0 +1,172 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /carrinhos (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd410f3da90>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "children" : [ {
+        "name" : "Validate car API schema",
+        "uid" : "26da23bbdc36525c",
+        "parentUid" : "f83fe99f69b6c47ececa68183a185d73",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655163890825,
+          "stop" : 1655163891459,
+          "duration" : 634
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f83fe99f69b6c47ececa68183a185d73"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /produtos (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd410e65880>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "children" : [ {
+        "name" : "Validate products API",
+        "uid" : "3d273534228c31b3",
+        "parentUid" : "38608730a3af0d5b772e7db4b36f7f36",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655163891469,
+          "stop" : 1655163892084,
+          "duration" : 615
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "38608730a3af0d5b772e7db4b36f7f36"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /usuarios (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd410ec2100>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "children" : [ {
+        "name" : "Validate user API schema",
+        "uid" : "960a8a0d353541b0",
+        "parentUid" : "a44799221b7e9b958b50e0ee8c0ab9a5",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655163892093,
+          "stop" : 1655163892708,
+          "duration" : 615
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a44799221b7e9b958b50e0ee8c0ab9a5"
+    }, {
+      "name" : "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+      "children" : [ {
+        "name" : "Successfully login",
+        "uid" : "3418beca253bd6f5",
+        "parentUid" : "fef007aaa958a116ed6fb1238a0b56be",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655163904953,
+          "stop" : 1655163905003,
+          "duration" : 50
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Login with a non-exists email",
+        "uid" : "1738ea5001f77688",
+        "parentUid" : "fef007aaa958a116ed6fb1238a0b56be",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655163905017,
+          "stop" : 1655163905034,
+          "duration" : 17
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fef007aaa958a116ed6fb1238a0b56be"
+    }, {
+      "name" : "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+      "children" : [ {
+        "name" : "Login with a non-exists email and password",
+        "uid" : "901ef34ab3d410ba",
+        "parentUid" : "914dc39651c319dd92c8b6abf199439e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655163905043,
+          "stop" : 1655163905062,
+          "duration" : 19
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Login with a non-exists password",
+        "uid" : "cc38034233c93593",
+        "parentUid" : "914dc39651c319dd92c8b6abf199439e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655163905073,
+          "stop" : 1655163905091,
+          "duration" : 18
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Login with an invalid email",
+        "uid" : "9a2cf4049c7bff24",
+        "parentUid" : "914dc39651c319dd92c8b6abf199439e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655163905099,
+          "stop" : 1655163905120,
+          "duration" : 21
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Login with just the blank email",
+        "uid" : "4a674fc511d9a78c",
+        "parentUid" : "914dc39651c319dd92c8b6abf199439e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655163905125,
+          "stop" : 1655163905140,
+          "duration" : 15
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Login with just the blank password",
+        "uid" : "acdbd67ef12fd5a6",
+        "parentUid" : "914dc39651c319dd92c8b6abf199439e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655163905146,
+          "stop" : 1655163905160,
+          "duration" : 14
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Login with a blank email and password",
+        "uid" : "1fc1891fa44c98a9",
+        "parentUid" : "914dc39651c319dd92c8b6abf199439e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655163905165,
+          "stop" : 1655163905181,
+          "duration" : 16
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "914dc39651c319dd92c8b6abf199439e"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
