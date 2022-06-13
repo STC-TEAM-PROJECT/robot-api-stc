@@ -3,15 +3,12 @@ output.xml
 report.html
 http://start.sh
 *.png
-*env/
-env*/
 .idea/
 *.pyc
 *.log
 *.apks
 *.apk
 *.ipa
-.env
 .zip
 /app/
 .pabotsuitenames
