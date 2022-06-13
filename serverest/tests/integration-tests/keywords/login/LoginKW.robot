@@ -1,14 +1,16 @@
 *** Keywords ***
 Login
     [Documentation]        used to login.
-    [Arguments]            ${email}     ${password}
+    [Arguments]    ${email}    ${password}
+
     ${headers}=            Create Dictionary
     ...                    content-type=application/json
+    
     ${body}=               Create Dictionary
     ...                    email=${email}
     ...                    password=${password}
 
-    Create Session         serveRest            ${URL_DEV}        verify=True
+    Create Session         serveRest            ${BASE_URL}       verify=True
     ${response}=           POST On Session      serveRest         /login
     ...                    json=${body}
     ...                    headers=${headers}
