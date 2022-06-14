@@ -18,6 +18,14 @@ jobs:
       - name: Start ServeRest locally
         run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
 
+      - name: Wait for setup to succeed
+        uses: lewagon/wait-on-check-action@v1.0.0
+        with:
+          ref: ${{ github.ref }}
+          check-name: 'Start ServeRest locally'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 10
+
       - name: Run schema tests
         if: always()
         run: make run-all-schema
@@ -43,9 +51,17 @@ jobs:
       - name: Start ServeRest locally
         run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
 
+      - name: Wait for setup to succeed
+        uses: lewagon/wait-on-check-action@v1.0.0
+        with:
+          ref: ${{ github.ref }}
+          check-name: 'Start ServeRest locally'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 10
+
       - name: Run integration tests
         if: always()
-        run: run-all-integration
+        run: make run-all-integration
         continue-on-error: true
         env:
           FORCE_COLOR: 2
