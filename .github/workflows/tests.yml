@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      
+      - name: Start ServeRest locally
+        run: docker run -d -p 3030:3030 paulogoncalvesbh/serverest
 
       - name: Setup project
         uses: ./.github/actions/setup
-
-      - name: Start ServeRest locally
-        run: docker run -d -p 3030:3030 paulogoncalvesbh/serverest
 
       - name: Run schema tests
         if: always()
@@ -37,12 +37,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      
+      - name: Start ServeRest locally
+        run: docker run -d -p 3030:3030 paulogoncalvesbh/serverest
 
       - name: Setup project
         uses: ./.github/actions/setup
-
-      - name: Start ServeRest locally
-        run: docker run -d -p 3030:3030 paulogoncalvesbh/serverest
 
       - name: Run integration tests
         if: always()
