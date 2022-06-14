@@ -1,0 +1,346 @@
+{
+  "uid" : "bddd3639e90a8a63",
+  "name" : "Successfully validating product",
+  "fullName" : "Integration-Tests.Produtos.TestProdutos.Successfully validating product",
+  "historyId" : "133d30619b70fde2ca1e4e1ee1612108",
+  "time" : {
+    "start" : 1655217744223,
+    "stop" : 1655217744325,
+    "duration" : 102
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "ProdutoKW.Search All Products",
+      "time" : {
+        "start" : 1655217744224,
+        "stop" : 1655217744321,
+        "duration" : 97
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "BuiltIn.Create Dictionary",
+        "time" : {
+          "start" : 1655217744224,
+          "stop" : 1655217744225,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "be35743a45e96393",
+          "name" : "Keyword Log",
+          "source" : "be35743a45e96393.html",
+          "type" : "text/html",
+          "size" : 75
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "content-type=application/json"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "RequestsLibrary.Create Session",
+        "time" : {
+          "start" : 1655217744225,
+          "stop" : 1655217744226,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "e710b42805308c85",
+          "name" : "Keyword Log",
+          "source" : "e710b42805308c85.html",
+          "type" : "text/html",
+          "size" : 219
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "serveRest"
+        }, {
+          "name" : "arg2",
+          "value" : "${BASE_URL}"
+        }, {
+          "name" : "arg3",
+          "value" : "verify=True"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "RequestsLibrary.GET On Session",
+        "time" : {
+          "start" : 1655217744226,
+          "stop" : 1655217744319,
+          "duration" : 93
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "26b02135a6a38992",
+          "name" : "Keyword Log",
+          "source" : "26b02135a6a38992.html",
+          "type" : "text/html",
+          "size" : 6126
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "serveRest"
+        }, {
+          "name" : "arg2",
+          "value" : "/produtos"
+        }, {
+          "name" : "arg3",
+          "value" : "headers=${headers}"
+        }, {
+          "name" : "arg4",
+          "value" : "expected_status=any"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "BuiltIn.Log",
+        "time" : {
+          "start" : 1655217744319,
+          "stop" : 1655217744319,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "63deee390c146b35",
+          "name" : "Keyword Log",
+          "source" : "63deee390c146b35.html",
+          "type" : "text/html",
+          "size" : 42
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${response}"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "BuiltIn.Set Test Variable",
+        "time" : {
+          "start" : 1655217744320,
+          "stop" : 1655217744320,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "1d20aae1b7cd45b3",
+          "name" : "Keyword Log",
+          "source" : "1d20aae1b7cd45b3.html",
+          "type" : "text/html",
+          "size" : 56
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${response}"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 5,
+      "attachmentsCount" : 5,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "BuiltIn.Should Be Equal As Strings",
+      "time" : {
+        "start" : 1655217744321,
+        "stop" : 1655217744322,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "aa211bc5f0d44e4a",
+        "name" : "Keyword Log",
+        "source" : "aa211bc5f0d44e4a.html",
+        "type" : "text/html",
+        "size" : 79
+      } ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${response.status_code}"
+      }, {
+        "name" : "arg2",
+        "value" : "200"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "BuiltIn.Set Test Variable",
+      "time" : {
+        "start" : 1655217744322,
+        "stop" : 1655217744324,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "6b38c15247fcd7c1",
+        "name" : "Keyword Log",
+        "source" : "6b38c15247fcd7c1.html",
+        "type" : "text/html",
+        "size" : 42
+      } ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${quantity}"
+      }, {
+        "name" : "arg2",
+        "value" : "${response.json()[\"quantidade\"]}"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "BuiltIn.Should Be Equal As Strings",
+      "time" : {
+        "start" : 1655217744324,
+        "stop" : 1655217744325,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${response.json()[\"quantidade\"]}"
+      }, {
+        "name" : "arg2",
+        "value" : "${quantity}"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 9,
+    "attachmentsCount" : 7,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Integration-Tests"
+  }, {
+    "name" : "suite",
+    "value" : "Produtos"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProdutos"
+  }, {
+    "name" : "framework",
+    "value" : "robotframework"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "host",
+    "value" : "fv-az202-20"
+  }, {
+    "name" : "thread",
+    "value" : "default-60f6dbc2-bf3f-40c2-bd39-9705260480c2"
+  }, {
+    "name" : "tag",
+    "value" : "@integration_tests"
+  }, {
+    "name" : "tag",
+    "value" : "@produtos"
+  }, {
+    "name" : "tag",
+    "value" : "@regression"
+  }, {
+    "name" : "tag",
+    "value" : "@integration_tests"
+  }, {
+    "name" : "tag",
+    "value" : "@produtos"
+  }, {
+    "name" : "tag",
+    "value" : "@regression"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "96d8fc14f1f6b76",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/5//#testresult/96d8fc14f1f6b76",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+        "time" : {
+          "start" : 1655217409397,
+          "stop" : 1655217410012,
+          "duration" : 615
+        }
+      }, {
+        "uid" : "f3cf735c4547c015",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/4//#testresult/f3cf735c4547c015",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+        "time" : {
+          "start" : 1655217114926,
+          "stop" : 1655217115541,
+          "duration" : 615
+        }
+      }, {
+        "uid" : "ea088073b0bcb31c",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/3//#testresult/ea088073b0bcb31c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655216712549,
+          "stop" : 1655216713197,
+          "duration" : 648
+        }
+      } ]
+    },
+    "tags" : [ "@regression", "@integration_tests", "@produtos" ]
+  },
+  "source" : "bddd3639e90a8a63.json",
+  "parameterValues" : [ ]
+}

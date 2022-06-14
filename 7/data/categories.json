@@ -1,0 +1,56 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "Rustic Fresh Keyboard != Samsung 60 polegadas",
+      "children" : [ {
+        "name" : "Successfully validating product by ID",
+        "uid" : "c7d43cf5a0742381",
+        "parentUid" : "1ca5c66769ec8083fc322e403e103155",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217744431,
+          "stop" : 1655217744529,
+          "duration" : 98
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1ca5c66769ec8083fc322e403e103155"
+    }, {
+      "name" : "Resolving variable '${response.json()[\"produtos\"][0][\"nome\"]}' failed: IndexError: list index out of range",
+      "children" : [ {
+        "name" : "Successfully validating product by Name",
+        "uid" : "55dd618b02154c4f",
+        "parentUid" : "0b3e3f396a03fb2217c55edb69505a39",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217744532,
+          "stop" : 1655217744629,
+          "duration" : 97
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Successfully validating product by Description And Name",
+        "uid" : "b13723f4557a018e",
+        "parentUid" : "0b3e3f396a03fb2217c55edb69505a39",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217744632,
+          "stop" : 1655217744729,
+          "duration" : 97
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0b3e3f396a03fb2217c55edb69505a39"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
