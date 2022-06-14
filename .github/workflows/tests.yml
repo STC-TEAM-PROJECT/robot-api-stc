@@ -16,12 +16,12 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Start ServeRest locally
-        run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
+        run: docker run -p 3000:3000 paulogoncalvesbh/serverest
 
-      - name: Sleep for 10 seconds
-        uses: jakejarvis/wait-action@master
-        with:
-          time: '10s'
+      # - name: Sleep for 5 seconds
+      #   uses: jakejarvis/wait-action@master
+      #   with:
+      #     time: '5s'
 
       - name: Run schema tests
         if: always()
@@ -46,12 +46,12 @@ jobs:
         uses: ./.github/actions/setup
       
       - name: Start ServeRest locally
-        run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
+        run: docker run -p 3000:3000 paulogoncalvesbh/serverest
 
-      - name: Sleep for 10 seconds
-        uses: jakejarvis/wait-action@master
-        with:
-          time: '10s'
+      # - name: Sleep for 5 seconds
+      #   uses: jakejarvis/wait-action@master
+      #   with:
+      #     time: '5s'
 
       - name: Run integration tests
         if: always()
