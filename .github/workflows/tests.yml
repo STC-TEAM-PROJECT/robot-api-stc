@@ -16,7 +16,7 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Start ServeRest locally
-        run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
+        run: docker run -d -p 3030:3030 paulogoncalvesbh/serverest
 
       - name: Run schema tests
         if: always()
@@ -42,7 +42,7 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Start ServeRest locally
-        run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
+        run: docker run -d -p 3030:3030 paulogoncalvesbh/serverest
 
       - name: Run integration tests
         if: always()
