@@ -18,20 +18,20 @@ Successfully validating product by ID in the URL
     Should Be Equal As Strings          ${response.json()["nome"]}                      Logitech MX Vertical
 
 Successfully validating product by ID
-    [Tags]    @regression   
+    [Tags]    @regression   @test
     Search Products By Parameters       _id=K6leHdftCeOJj8BJ                   
     Should Be Equal As Strings          ${response.status_code}                          200
     Should Be Equal As Strings          ${response.json()["produtos"][0]["nome"]}        Samsung 60 polegadas
  
 Successfully validating product by Name
-    [Tags]    @regression  
+    [Tags]    @regression
     Search Products By Parameters       nome=Samsung 60 polegadas                  
     Should Be Equal As Strings          ${response.status_code}                          200
     Should Be Equal As Strings          ${response.json()["produtos"][0]["nome"]}        Samsung 60 polegadas
   
 Successfully validating product by Description And Name
-    [Tags]    @regression   
-    Search Products By Parameters       nome=Samsung 60 polegadas   descricao=TV                  
+    [Tags]    @regression   @test
+    Search Products By Parameters       nome=Samsung 60 polegadas   descricao=Tv                 
     Should Be Equal As Strings          ${response.status_code}                          200
     Should Be Equal As Strings          ${response.json()["produtos"][0]["nome"]}        Samsung 60 polegadas
     
