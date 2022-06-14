@@ -1,0 +1,362 @@
+{
+  "uid" : "94bd8d2314cf1932",
+  "name" : "Successfully validating product",
+  "fullName" : "Integration-Tests.Produtos.TestProdutos.Successfully validating product",
+  "historyId" : "133d30619b70fde2ca1e4e1ee1612108",
+  "time" : {
+    "start" : 1655220756159,
+    "stop" : 1655220756773,
+    "duration" : 614
+  },
+  "status" : "failed",
+  "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1f2541dc10>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+  "flaky" : true,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1f2541dc10>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+    "steps" : [ {
+      "name" : "ProdutoKW.Search All Products",
+      "time" : {
+        "start" : 1655220756159,
+        "stop" : 1655220756771,
+        "duration" : 612
+      },
+      "status" : "failed",
+      "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1f2541dc10>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "steps" : [ {
+        "name" : "BuiltIn.Create Dictionary",
+        "time" : {
+          "start" : 1655220756159,
+          "stop" : 1655220756160,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "7de96e75945fedc2",
+          "name" : "Keyword Log",
+          "source" : "7de96e75945fedc2.html",
+          "type" : "text/html",
+          "size" : 75
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "content-type=application/json"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "RequestsLibrary.Create Session",
+        "time" : {
+          "start" : 1655220756160,
+          "stop" : 1655220756161,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "cf79762b848094e",
+          "name" : "Keyword Log",
+          "source" : "cf79762b848094e.html",
+          "type" : "text/html",
+          "size" : 219
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "serveRest"
+        }, {
+          "name" : "arg2",
+          "value" : "${BASE_URL}"
+        }, {
+          "name" : "arg3",
+          "value" : "verify=True"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "RequestsLibrary.GET On Session",
+        "time" : {
+          "start" : 1655220756161,
+          "stop" : 1655220756769,
+          "duration" : 608
+        },
+        "status" : "failed",
+        "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1f2541dc10>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "9f8df87822eecc0b",
+          "name" : "Keyword Log",
+          "source" : "9f8df87822eecc0b.html",
+          "type" : "text/html",
+          "size" : 1228
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "serveRest"
+        }, {
+          "name" : "arg2",
+          "value" : "/produtos"
+        }, {
+          "name" : "arg3",
+          "value" : "headers=${headers}"
+        }, {
+          "name" : "arg4",
+          "value" : "expected_status=any"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      }, {
+        "name" : "BuiltIn.Log",
+        "time" : {
+          "start" : 1655220756769,
+          "stop" : 1655220756770,
+          "duration" : 1
+        },
+        "status" : "failed",
+        "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1f2541dc10>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${response}"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      }, {
+        "name" : "BuiltIn.Set Test Variable",
+        "time" : {
+          "start" : 1655220756770,
+          "stop" : 1655220756770,
+          "duration" : 0
+        },
+        "status" : "failed",
+        "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1f2541dc10>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${response}"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 5,
+      "attachmentsCount" : 3,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "BuiltIn.Should Be Equal As Strings",
+      "time" : {
+        "start" : 1655220756771,
+        "stop" : 1655220756771,
+        "duration" : 0
+      },
+      "status" : "failed",
+      "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1f2541dc10>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${response.status_code}"
+      }, {
+        "name" : "arg2",
+        "value" : "200"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "BuiltIn.Set Test Variable",
+      "time" : {
+        "start" : 1655220756772,
+        "stop" : 1655220756772,
+        "duration" : 0
+      },
+      "status" : "failed",
+      "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1f2541dc10>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${quantity}"
+      }, {
+        "name" : "arg2",
+        "value" : "${response.json()[\"quantidade\"]}"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "BuiltIn.Should Be Equal As Strings",
+      "time" : {
+        "start" : 1655220756772,
+        "stop" : 1655220756772,
+        "duration" : 0
+      },
+      "status" : "failed",
+      "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1f2541dc10>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${response.json()[\"quantidade\"]}"
+      }, {
+        "name" : "arg2",
+        "value" : "${quantity}"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 9,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Integration-Tests"
+  }, {
+    "name" : "suite",
+    "value" : "Produtos"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProdutos"
+  }, {
+    "name" : "framework",
+    "value" : "robotframework"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "host",
+    "value" : "fv-az180-72"
+  }, {
+    "name" : "thread",
+    "value" : "default-bcd441f3-51a0-4588-8b56-57009bb64496"
+  }, {
+    "name" : "tag",
+    "value" : "@integration_tests"
+  }, {
+    "name" : "tag",
+    "value" : "@produtos"
+  }, {
+    "name" : "tag",
+    "value" : "@regression"
+  }, {
+    "name" : "tag",
+    "value" : "@integration_tests"
+  }, {
+    "name" : "tag",
+    "value" : "@produtos"
+  }, {
+    "name" : "tag",
+    "value" : "@regression"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 7
+      },
+      "items" : [ {
+        "uid" : "e1a30508d729aad5",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/9//#testresult/e1a30508d729aad5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655219662319,
+          "stop" : 1655219662415,
+          "duration" : 96
+        }
+      }, {
+        "uid" : "15e6da833e175daa",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/8//#testresult/15e6da833e175daa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655218423136,
+          "stop" : 1655218423214,
+          "duration" : 78
+        }
+      }, {
+        "uid" : "bddd3639e90a8a63",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/7//#testresult/bddd3639e90a8a63",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655217744223,
+          "stop" : 1655217744325,
+          "duration" : 102
+        }
+      }, {
+        "uid" : "96d8fc14f1f6b76",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/5//#testresult/96d8fc14f1f6b76",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+        "time" : {
+          "start" : 1655217409397,
+          "stop" : 1655217410012,
+          "duration" : 615
+        }
+      }, {
+        "uid" : "f3cf735c4547c015",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/4//#testresult/f3cf735c4547c015",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+        "time" : {
+          "start" : 1655217114926,
+          "stop" : 1655217115541,
+          "duration" : 615
+        }
+      }, {
+        "uid" : "ea088073b0bcb31c",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/3//#testresult/ea088073b0bcb31c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655216712549,
+          "stop" : 1655216713197,
+          "duration" : 648
+        }
+      } ]
+    },
+    "tags" : [ "@regression", "@integration_tests", "@produtos" ]
+  },
+  "source" : "94bd8d2314cf1932.json",
+  "parameterValues" : [ ]
+}

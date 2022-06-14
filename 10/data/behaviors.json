@@ -1,0 +1,291 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "Validate car API schema",
+    "uid" : "e57e9cabca58534f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220745598,
+      "stop" : 1655220746227,
+      "duration" : 629
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Validate products API",
+    "uid" : "7d4be65dfc205b88",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220746241,
+      "stop" : 1655220746856,
+      "duration" : 615
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Validate user API schema",
+    "uid" : "fc74c7065acc8021",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220746869,
+      "stop" : 1655220747485,
+      "duration" : 616
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Successfully login",
+    "uid" : "f923b3affdaa6751",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220751137,
+      "stop" : 1655220751791,
+      "duration" : 654
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Login with a non-exists email",
+    "uid" : "3b5caf8a501c4087",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220751796,
+      "stop" : 1655220752412,
+      "duration" : 616
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Login with a non-exists email and password",
+    "uid" : "f44ed42af4ab4a0",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220752417,
+      "stop" : 1655220753032,
+      "duration" : 615
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Login with a non-exists password",
+    "uid" : "7282e8bfa6401d70",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220753036,
+      "stop" : 1655220753652,
+      "duration" : 616
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Login with an invalid email",
+    "uid" : "c7667346b474eaba",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220753656,
+      "stop" : 1655220754272,
+      "duration" : 616
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Login with just the blank email",
+    "uid" : "ed7dd8e26960e628",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220754277,
+      "stop" : 1655220754895,
+      "duration" : 618
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Login with just the blank password",
+    "uid" : "9f821bc53e4580cb",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220754899,
+      "stop" : 1655220755516,
+      "duration" : 617
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Login with a blank email and password",
+    "uid" : "516270837eefe8e3",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220755521,
+      "stop" : 1655220756138,
+      "duration" : 617
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Successfully validating product",
+    "uid" : "94bd8d2314cf1932",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220756159,
+      "stop" : 1655220756773,
+      "duration" : 614
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Successfully validating product by ID in the URL",
+    "uid" : "6f60e2ba8d8471c3",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220756777,
+      "stop" : 1655220757391,
+      "duration" : 614
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Successfully validating product by ID",
+    "uid" : "8f4dab156730a046",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220757394,
+      "stop" : 1655220758010,
+      "duration" : 616
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Successfully validating product by Name",
+    "uid" : "16c7cf9fd3cce9c6",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220758014,
+      "stop" : 1655220758629,
+      "duration" : 615
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Successfully validating product by Description And Name",
+    "uid" : "5791caf8f90259b5",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220758633,
+      "stop" : 1655220759248,
+      "duration" : 615
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Unsuccessfully validating product by ID in the URL",
+    "uid" : "6dd64adc1f1e2f4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220759251,
+      "stop" : 1655220759867,
+      "duration" : 616
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Unsuccessfully validating product by Name",
+    "uid" : "7320e3630a5a3bbc",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220759870,
+      "stop" : 1655220760485,
+      "duration" : 615
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Unsuccessfully validating product by Description",
+    "uid" : "b998d845c904a9bf",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220760490,
+      "stop" : 1655220761107,
+      "duration" : 617
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Successfully validating that the price must be a number",
+    "uid" : "dc67fa9c8d4cc575",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220761110,
+      "stop" : 1655220761727,
+      "duration" : 617
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Successfully validating that the price must be an integer",
+    "uid" : "fbdcdfb1a07012ee",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220761731,
+      "stop" : 1655220762346,
+      "duration" : 615
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Unsuccessfully validating product by Description And Name",
+    "uid" : "b0228202f5d7522e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655220762350,
+      "stop" : 1655220762965,
+      "duration" : 615
+    },
+    "flaky" : true,
+    "newFailed" : true,
+    "parameters" : [ ]
+  } ],
+  "name" : "behaviors"
+}
