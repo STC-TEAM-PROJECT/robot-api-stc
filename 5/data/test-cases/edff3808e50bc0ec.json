@@ -1,0 +1,303 @@
+{
+  "uid" : "edff3808e50bc0ec",
+  "name" : "Validate user API schema",
+  "fullName" : "Schema-Tests.Schemas.Usuarios.TestUsuariosSchema.Validate user API schema",
+  "historyId" : "43177f945fb13975f6be143e3f35986f",
+  "time" : {
+    "start" : 1655217380340,
+    "stop" : 1655217380957,
+    "duration" : 617
+  },
+  "status" : "failed",
+  "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /usuarios (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /usuarios (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+    "steps" : [ {
+      "name" : "UsuarioKW.Search All Users",
+      "time" : {
+        "start" : 1655217380340,
+        "stop" : 1655217380955,
+        "duration" : 615
+      },
+      "status" : "failed",
+      "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /usuarios (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+      "steps" : [ {
+        "name" : "BuiltIn.Create Dictionary",
+        "time" : {
+          "start" : 1655217380340,
+          "stop" : 1655217380341,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "fc9336be480ff0bf",
+          "name" : "Keyword Log",
+          "source" : "fc9336be480ff0bf.html",
+          "type" : "text/html",
+          "size" : 75
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "content-type=application/json"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "RequestsLibrary.Create Session",
+        "time" : {
+          "start" : 1655217380342,
+          "stop" : 1655217380342,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "92303b42fe8171d4",
+          "name" : "Keyword Log",
+          "source" : "92303b42fe8171d4.html",
+          "type" : "text/html",
+          "size" : 219
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "serveRest"
+        }, {
+          "name" : "arg2",
+          "value" : "${BASE_URL}"
+        }, {
+          "name" : "arg3",
+          "value" : "verify=True"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "RequestsLibrary.GET On Session",
+        "time" : {
+          "start" : 1655217380343,
+          "stop" : 1655217380953,
+          "duration" : 610
+        },
+        "status" : "failed",
+        "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /usuarios (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "4161fb94308505ce",
+          "name" : "Keyword Log",
+          "source" : "4161fb94308505ce.html",
+          "type" : "text/html",
+          "size" : 984
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "serveRest"
+        }, {
+          "name" : "arg2",
+          "value" : "/usuarios"
+        }, {
+          "name" : "arg3",
+          "value" : "headers=${headers}"
+        }, {
+          "name" : "arg4",
+          "value" : "expected_status=any"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      }, {
+        "name" : "BuiltIn.Log",
+        "time" : {
+          "start" : 1655217380953,
+          "stop" : 1655217380954,
+          "duration" : 1
+        },
+        "status" : "failed",
+        "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /usuarios (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${response}"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      }, {
+        "name" : "BuiltIn.Set Test Variable",
+        "time" : {
+          "start" : 1655217380954,
+          "stop" : 1655217380954,
+          "duration" : 0
+        },
+        "status" : "failed",
+        "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /usuarios (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${response}"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 5,
+      "attachmentsCount" : 3,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "BuiltIn.Should Be Equal As Strings",
+      "time" : {
+        "start" : 1655217380955,
+        "stop" : 1655217380956,
+        "duration" : 1
+      },
+      "status" : "failed",
+      "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /usuarios (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${response.status_code}"
+      }, {
+        "name" : "arg2",
+        "value" : "200"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "JsonValidator.Validate Jsonschema From File",
+      "time" : {
+        "start" : 1655217380956,
+        "stop" : 1655217380956,
+        "duration" : 0
+      },
+      "status" : "failed",
+      "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /usuarios (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${response.json()}"
+      }, {
+        "name" : "arg2",
+        "value" : "${USER_SCHEMA}"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 8,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Schema-Tests"
+  }, {
+    "name" : "suite",
+    "value" : "Schemas"
+  }, {
+    "name" : "subSuite",
+    "value" : "Usuarios.TestUsuariosSchema"
+  }, {
+    "name" : "framework",
+    "value" : "robotframework"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "host",
+    "value" : "fv-az504-108"
+  }, {
+    "name" : "thread",
+    "value" : "default-97c538b5-0a3e-4f0f-b0e7-df2a50394cf1"
+  }, {
+    "name" : "tag",
+    "value" : "@regression"
+  }, {
+    "name" : "tag",
+    "value" : "@schema_tests"
+  }, {
+    "name" : "tag",
+    "value" : "@usuarios"
+  }, {
+    "name" : "tag",
+    "value" : "@regression"
+  }, {
+    "name" : "tag",
+    "value" : "@schema_tests"
+  }, {
+    "name" : "tag",
+    "value" : "@usuarios"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "bb852855a720609",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/4//#testresult/bb852855a720609",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /usuarios (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+        "time" : {
+          "start" : 1655217086113,
+          "stop" : 1655217086731,
+          "duration" : 618
+        }
+      }, {
+        "uid" : "ebe8527a13c97a3f",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/3//#testresult/ebe8527a13c97a3f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655216676231,
+          "stop" : 1655216676255,
+          "duration" : 24
+        }
+      } ]
+    },
+    "tags" : [ "@usuarios", "@schema_tests", "@regression" ]
+  },
+  "source" : "edff3808e50bc0ec.json",
+  "parameterValues" : [ ]
+}
