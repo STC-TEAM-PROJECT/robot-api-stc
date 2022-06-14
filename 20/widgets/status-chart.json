@@ -1,0 +1,221 @@
+[ {
+  "uid" : "3cad5af315391433",
+  "name" : "Unsuccessfully validating product by ID in the URL",
+  "time" : {
+    "start" : 1655223175920,
+    "stop" : 1655223175935,
+    "duration" : 15
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b2333053da4f1c7",
+  "name" : "Validate user API schema",
+  "time" : {
+    "start" : 1655223163825,
+    "stop" : 1655223163847,
+    "duration" : 22
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "889168875ef1ae4f",
+  "name" : "Login with a non-exists password",
+  "time" : {
+    "start" : 1655223175630,
+    "stop" : 1655223175649,
+    "duration" : 19
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7d1f9217a3e8f42f",
+  "name" : "Unsuccessfully validating product by Description",
+  "time" : {
+    "start" : 1655223175961,
+    "stop" : 1655223175978,
+    "duration" : 17
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "64dd9dca2670d6da",
+  "name" : "Successfully validating that the price must be an integer",
+  "time" : {
+    "start" : 1655223176005,
+    "stop" : 1655223176022,
+    "duration" : 17
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e839e355885f0534",
+  "name" : "Login with an invalid email",
+  "time" : {
+    "start" : 1655223175655,
+    "stop" : 1655223175677,
+    "duration" : 22
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "90e876f7578f6df7",
+  "name" : "Successfully validating that the price must be a number",
+  "time" : {
+    "start" : 1655223175982,
+    "stop" : 1655223176000,
+    "duration" : 18
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "890a9693aa46d5c1",
+  "name" : "Successfully validating product by ID in the URL",
+  "time" : {
+    "start" : 1655223175818,
+    "stop" : 1655223175848,
+    "duration" : 30
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a47ecc65e4a0b924",
+  "name" : "Successfully validating product by Name",
+  "time" : {
+    "start" : 1655223175874,
+    "stop" : 1655223175894,
+    "duration" : 20
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "618b7366fe3d965",
+  "name" : "Login with a non-exists email",
+  "time" : {
+    "start" : 1655223175577,
+    "stop" : 1655223175599,
+    "duration" : 22
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ad623fe38886eee4",
+  "name" : "Successfully login",
+  "time" : {
+    "start" : 1655223175500,
+    "stop" : 1655223175572,
+    "duration" : 72
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ad413398fe710afc",
+  "name" : "Login with just the blank email",
+  "time" : {
+    "start" : 1655223175683,
+    "stop" : 1655223175703,
+    "duration" : 20
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8533803f7d84cb7d",
+  "name" : "Validate products API",
+  "time" : {
+    "start" : 1655223163787,
+    "stop" : 1655223163811,
+    "duration" : 24
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "76e032f74d6484cf",
+  "name" : "Unsuccessfully validating product by Description And Name",
+  "time" : {
+    "start" : 1655223176026,
+    "stop" : 1655223176042,
+    "duration" : 16
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1cabdbe5b2d7dbc1",
+  "name" : "Validate car API schema",
+  "time" : {
+    "start" : 1655223163726,
+    "stop" : 1655223163773,
+    "duration" : 47
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bc45c4a7ddd235a7",
+  "name" : "Successfully validating product by Description And Name",
+  "time" : {
+    "start" : 1655223175898,
+    "stop" : 1655223175916,
+    "duration" : 18
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "40babc47e8f8cc8f",
+  "name" : "Unsuccessfully validating product by Name",
+  "time" : {
+    "start" : 1655223175940,
+    "stop" : 1655223175957,
+    "duration" : 17
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fcd4f5570a369ea4",
+  "name" : "Successfully validating product by ID",
+  "time" : {
+    "start" : 1655223175852,
+    "stop" : 1655223175870,
+    "duration" : 18
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "456b92c1ee5241e6",
+  "name" : "Login with a non-exists email and password",
+  "time" : {
+    "start" : 1655223175605,
+    "stop" : 1655223175625,
+    "duration" : 20
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b07e03db973cc8b7",
+  "name" : "Login with a blank email and password",
+  "time" : {
+    "start" : 1655223175739,
+    "stop" : 1655223175760,
+    "duration" : 21
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5e0f7d52ea9e2061",
+  "name" : "Login with just the blank password",
+  "time" : {
+    "start" : 1655223175708,
+    "stop" : 1655223175734,
+    "duration" : 26
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2b87816773e2f4cc",
+  "name" : "Successfully validating product",
+  "time" : {
+    "start" : 1655223175787,
+    "stop" : 1655223175814,
+    "duration" : 27
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
