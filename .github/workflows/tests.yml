@@ -17,11 +17,13 @@ jobs:
 
       - name: Start ServeRest locally
         run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
-
-      - name: Sleep for 3 seconds
-        uses: jakejarvis/wait-action@master
         with:
-          time: '3s'
+           wait-on: 'http://localhost:3000'
+
+      # - name: Sleep for 3 seconds
+      #   uses: jakejarvis/wait-action@master
+      #   with:
+      #     time: '3s'
 
       - name: Run schema tests
         if: always()
@@ -47,11 +49,13 @@ jobs:
       
       - name: Start ServeRest locally
         run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
-
-      - name: Sleep for 3 seconds
-        uses: jakejarvis/wait-action@master
         with:
-          time: '3s'
+           wait-on: 'http://localhost:3000'
+
+      # - name: Sleep for 3 seconds
+      #   uses: jakejarvis/wait-action@master
+      #   with:
+      #     time: '3s'
 
       - name: Run integration tests
         if: always()
