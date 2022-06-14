@@ -1,0 +1,407 @@
+{
+  "uid" : "1b8666e1919b629d",
+  "name" : "Unsuccessfully validating product by Description And Name",
+  "fullName" : "Integration-Tests.Produtos.TestProdutos.Unsuccessfully validating product by Description And Name",
+  "historyId" : "5c04e7f6a06e0396592868d2fe4f4d6d",
+  "time" : {
+    "start" : 1655223507000,
+    "stop" : 1655223507017,
+    "duration" : 17
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "ProdutoKW.Search Products By Parameters",
+      "time" : {
+        "start" : 1655223507000,
+        "stop" : 1655223507014,
+        "duration" : 14
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "BuiltIn.Create Dictionary",
+        "time" : {
+          "start" : 1655223507001,
+          "stop" : 1655223507002,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "2b9acc53e322b1e7",
+          "name" : "Keyword Log",
+          "source" : "2b9acc53e322b1e7.html",
+          "type" : "text/html",
+          "size" : 75
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "content-type=application/json"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "RequestsLibrary.Create Session",
+        "time" : {
+          "start" : 1655223507002,
+          "stop" : 1655223507003,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "d533b53fe86b554b",
+          "name" : "Keyword Log",
+          "source" : "d533b53fe86b554b.html",
+          "type" : "text/html",
+          "size" : 219
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "serveRest"
+        }, {
+          "name" : "arg2",
+          "value" : "${BASE_URL}"
+        }, {
+          "name" : "arg3",
+          "value" : "verify=True"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "RequestsLibrary.GET On Session",
+        "time" : {
+          "start" : 1655223507003,
+          "stop" : 1655223507011,
+          "duration" : 8
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "688e1b9a43b7b1e0",
+          "name" : "Keyword Log",
+          "source" : "688e1b9a43b7b1e0.html",
+          "type" : "text/html",
+          "size" : 1195
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "serveRest"
+        }, {
+          "name" : "arg2",
+          "value" : "/produtos"
+        }, {
+          "name" : "arg3",
+          "value" : "headers=${headers}"
+        }, {
+          "name" : "arg4",
+          "value" : "params=${params}&${others_params}"
+        }, {
+          "name" : "arg5",
+          "value" : "expected_status=any"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "BuiltIn.Log",
+        "time" : {
+          "start" : 1655223507011,
+          "stop" : 1655223507012,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "5c3b2a90c6f5c3dc",
+          "name" : "Keyword Log",
+          "source" : "5c3b2a90c6f5c3dc.html",
+          "type" : "text/html",
+          "size" : 42
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${response}"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "BuiltIn.Set Test Variable",
+        "time" : {
+          "start" : 1655223507012,
+          "stop" : 1655223507013,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "28f5bd8d94436e82",
+          "name" : "Keyword Log",
+          "source" : "28f5bd8d94436e82.html",
+          "type" : "text/html",
+          "size" : 56
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${response}"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "nome=Samsung 60 polegadas"
+      }, {
+        "name" : "arg2",
+        "value" : "descricao=incorrect"
+      } ],
+      "stepsCount" : 5,
+      "attachmentsCount" : 5,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "BuiltIn.Should Be Equal As Strings",
+      "time" : {
+        "start" : 1655223507014,
+        "stop" : 1655223507015,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "72f2b09eb935829a",
+        "name" : "Keyword Log",
+        "source" : "72f2b09eb935829a.html",
+        "type" : "text/html",
+        "size" : 79
+      } ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${response.status_code}"
+      }, {
+        "name" : "arg2",
+        "value" : "200"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "BuiltIn.Should Be Equal As Strings",
+      "time" : {
+        "start" : 1655223507016,
+        "stop" : 1655223507017,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "7b264a489a397296",
+        "name" : "Keyword Log",
+        "source" : "7b264a489a397296.html",
+        "type" : "text/html",
+        "size" : 79
+      } ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${response.json()[\"quantidade\"]}"
+      }, {
+        "name" : "arg2",
+        "value" : "0"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 8,
+    "attachmentsCount" : 7,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Integration-Tests"
+  }, {
+    "name" : "suite",
+    "value" : "Produtos"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProdutos"
+  }, {
+    "name" : "framework",
+    "value" : "robotframework"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "host",
+    "value" : "fv-az198-651"
+  }, {
+    "name" : "thread",
+    "value" : "default-1fe464b1-08be-4fdb-aba1-76728dac4677"
+  }, {
+    "name" : "tag",
+    "value" : "@integration_tests"
+  }, {
+    "name" : "tag",
+    "value" : "@produtos"
+  }, {
+    "name" : "tag",
+    "value" : "@regression"
+  }, {
+    "name" : "tag",
+    "value" : "@integration_tests"
+  }, {
+    "name" : "tag",
+    "value" : "@produtos"
+  }, {
+    "name" : "tag",
+    "value" : "@regression"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 9,
+        "unknown" : 0,
+        "total" : 12
+      },
+      "items" : [ {
+        "uid" : "76e032f74d6484cf",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/20//#testresult/76e032f74d6484cf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655223176026,
+          "stop" : 1655223176042,
+          "duration" : 16
+        }
+      }, {
+        "uid" : "7c230243095518fa",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/18//#testresult/7c230243095518fa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655222518048,
+          "stop" : 1655222518060,
+          "duration" : 12
+        }
+      }, {
+        "uid" : "ba8f1d00fef0382f",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/16//#testresult/ba8f1d00fef0382f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655222198568,
+          "stop" : 1655222198580,
+          "duration" : 12
+        }
+      }, {
+        "uid" : "92ee7fab65cda107",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/11//#testresult/92ee7fab65cda107",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655220970082,
+          "stop" : 1655220970096,
+          "duration" : 14
+        }
+      }, {
+        "uid" : "b0228202f5d7522e",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/10//#testresult/b0228202f5d7522e",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos?nome=Samsung%2060%20polegadas&descricao=incorrect (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1f253deca0>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+        "time" : {
+          "start" : 1655220762350,
+          "stop" : 1655220762965,
+          "duration" : 615
+        }
+      }, {
+        "uid" : "d22d8984004f2190",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/9//#testresult/d22d8984004f2190",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655219663337,
+          "stop" : 1655219663430,
+          "duration" : 93
+        }
+      }, {
+        "uid" : "aea0b324ec7213a8",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/8//#testresult/aea0b324ec7213a8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655218423938,
+          "stop" : 1655218424024,
+          "duration" : 86
+        }
+      }, {
+        "uid" : "2c2e9f662c4d9cfb",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/7//#testresult/2c2e9f662c4d9cfb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655217745258,
+          "stop" : 1655217745356,
+          "duration" : 98
+        }
+      }, {
+        "uid" : "27c4e8cc9b4774f",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/5//#testresult/27c4e8cc9b4774f",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos?nome=Samsung%2060%20polegadas&descricao=incorrect (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+        "time" : {
+          "start" : 1655217415601,
+          "stop" : 1655217416218,
+          "duration" : 617
+        }
+      }, {
+        "uid" : "db6296108cf352c4",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/4//#testresult/db6296108cf352c4",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos?nome=Samsung%2060%20polegadas&descricao=incorrect (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+        "time" : {
+          "start" : 1655217121128,
+          "stop" : 1655217121744,
+          "duration" : 616
+        }
+      }, {
+        "uid" : "e25ed298a7f0e5d2",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/3//#testresult/e25ed298a7f0e5d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655216713431,
+          "stop" : 1655216713449,
+          "duration" : 18
+        }
+      } ]
+    },
+    "tags" : [ "@regression", "@integration_tests", "@produtos" ]
+  },
+  "source" : "1b8666e1919b629d.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc",
+  "buildOrder" : 22,
+  "buildName" : "GitHub Actions Run #2496641004",
+  "buildUrl" : "https://github.com/STC-TEAM-PROJECT/robot-api-stc/actions/runs/2496641004",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/22/"
+} ]
