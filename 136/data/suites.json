@@ -1,0 +1,176 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "Schema-Tests",
+    "children" : [ {
+      "name" : "TestCarrinhosSchema",
+      "children" : [ {
+        "name" : "Validate car API schema",
+        "uid" : "d7d94e33edb967f4",
+        "parentUid" : "3a2ccedb5b8b4f9a3412d0640c827763",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655165262409,
+          "stop" : 1655165263061,
+          "duration" : 652
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3a2ccedb5b8b4f9a3412d0640c827763"
+    }, {
+      "name" : "TestProdutosSchema",
+      "children" : [ {
+        "name" : "Validate products API",
+        "uid" : "6d76c30b578b75cb",
+        "parentUid" : "563ba048de4602650bcd7d1b05c5200d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655165263073,
+          "stop" : 1655165263093,
+          "duration" : 20
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "563ba048de4602650bcd7d1b05c5200d"
+    }, {
+      "name" : "TestUsuariosSchema",
+      "children" : [ {
+        "name" : "Validate user API schema",
+        "uid" : "ea85149fcb4dbacc",
+        "parentUid" : "65c46bb81f6dbbb289cdd6d50ed62656",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655165263105,
+          "stop" : 1655165263123,
+          "duration" : 18
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "65c46bb81f6dbbb289cdd6d50ed62656"
+    } ],
+    "uid" : "4e273f095adb5b35cac92322a74bd702"
+  }, {
+    "name" : "Integration-Tests",
+    "children" : [ {
+      "name" : "Login",
+      "children" : [ {
+        "name" : "TestLogin",
+        "children" : [ {
+          "name" : "Successfully login",
+          "uid" : "fdd375b8cdd3056d",
+          "parentUid" : "715918d57ace49ebc0d875eb16e96753",
+          "status" : "failed",
+          "time" : {
+            "start" : 1655165268499,
+            "stop" : 1655165268541,
+            "duration" : 42
+          },
+          "flaky" : true,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Login with a non-exists email",
+          "uid" : "ba753cd886c37196",
+          "parentUid" : "715918d57ace49ebc0d875eb16e96753",
+          "status" : "failed",
+          "time" : {
+            "start" : 1655165268551,
+            "stop" : 1655165268568,
+            "duration" : 17
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Login with a non-exists email and password",
+          "uid" : "36743bee779a2706",
+          "parentUid" : "715918d57ace49ebc0d875eb16e96753",
+          "status" : "failed",
+          "time" : {
+            "start" : 1655165268578,
+            "stop" : 1655165268594,
+            "duration" : 16
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Login with a non-exists password",
+          "uid" : "bda531d0ca5497bb",
+          "parentUid" : "715918d57ace49ebc0d875eb16e96753",
+          "status" : "failed",
+          "time" : {
+            "start" : 1655165268603,
+            "stop" : 1655165268618,
+            "duration" : 15
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Login with an invalid email",
+          "uid" : "eb2b90439270143e",
+          "parentUid" : "715918d57ace49ebc0d875eb16e96753",
+          "status" : "failed",
+          "time" : {
+            "start" : 1655165268624,
+            "stop" : 1655165268636,
+            "duration" : 12
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Login with just the blank email",
+          "uid" : "c298ef3ed0c57bde",
+          "parentUid" : "715918d57ace49ebc0d875eb16e96753",
+          "status" : "failed",
+          "time" : {
+            "start" : 1655165268641,
+            "stop" : 1655165268653,
+            "duration" : 12
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Login with just the blank password",
+          "uid" : "9fd5342d1e697808",
+          "parentUid" : "715918d57ace49ebc0d875eb16e96753",
+          "status" : "failed",
+          "time" : {
+            "start" : 1655165268659,
+            "stop" : 1655165268671,
+            "duration" : 12
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Login with a blank email and password",
+          "uid" : "ac79788227376b6a",
+          "parentUid" : "715918d57ace49ebc0d875eb16e96753",
+          "status" : "failed",
+          "time" : {
+            "start" : 1655165268677,
+            "stop" : 1655165268690,
+            "duration" : 13
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "715918d57ace49ebc0d875eb16e96753"
+      } ],
+      "uid" : "cf45ed83658b6d59f9018c964bdf9651"
+    } ],
+    "uid" : "ec365ff3586e5b176145d420526ec15a"
+  } ],
+  "name" : "suites"
+}

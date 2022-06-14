@@ -1,0 +1,468 @@
+{
+  "uid" : "d7d94e33edb967f4",
+  "name" : "Validate car API schema",
+  "fullName" : "Schema-Tests.TestCarrinhosSchema.Validate car API schema",
+  "historyId" : "037621e6966d8a018ace100c1a621d23",
+  "time" : {
+    "start" : 1655165262409,
+    "stop" : 1655165263061,
+    "duration" : 652
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "CarrinhoKW.Search All Carts",
+      "time" : {
+        "start" : 1655165262410,
+        "stop" : 1655165263052,
+        "duration" : 642
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "BuiltIn.Create Dictionary",
+        "time" : {
+          "start" : 1655165262411,
+          "stop" : 1655165262411,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "ab73a7e20575fd93",
+          "name" : "Keyword Log",
+          "source" : "ab73a7e20575fd93.html",
+          "type" : "text/html",
+          "size" : 75
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "content-type=application/json"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "RequestsLibrary.Create Session",
+        "time" : {
+          "start" : 1655165262412,
+          "stop" : 1655165262413,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "6310df51aa8e3e55",
+          "name" : "Keyword Log",
+          "source" : "6310df51aa8e3e55.html",
+          "type" : "text/html",
+          "size" : 219
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "serveRest"
+        }, {
+          "name" : "arg2",
+          "value" : "${BASE_URL}"
+        }, {
+          "name" : "arg3",
+          "value" : "verify=True"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "RequestsLibrary.GET On Session",
+        "time" : {
+          "start" : 1655165262413,
+          "stop" : 1655165263050,
+          "duration" : 637
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "e878f81213c69778",
+          "name" : "Keyword Log",
+          "source" : "e878f81213c69778.html",
+          "type" : "text/html",
+          "size" : 2432
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "serveRest"
+        }, {
+          "name" : "arg2",
+          "value" : "/carrinhos"
+        }, {
+          "name" : "arg3",
+          "value" : "headers=${headers}"
+        }, {
+          "name" : "arg4",
+          "value" : "expected_status=any"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "BuiltIn.Log",
+        "time" : {
+          "start" : 1655165263050,
+          "stop" : 1655165263051,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "6c5223b4094efe81",
+          "name" : "Keyword Log",
+          "source" : "6c5223b4094efe81.html",
+          "type" : "text/html",
+          "size" : 42
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${response}"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "BuiltIn.Set Global Variable",
+        "time" : {
+          "start" : 1655165263051,
+          "stop" : 1655165263052,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "424872a6c53ae82b",
+          "name" : "Keyword Log",
+          "source" : "424872a6c53ae82b.html",
+          "type" : "text/html",
+          "size" : 56
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${response}"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 5,
+      "attachmentsCount" : 5,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "BuiltIn.Should Be Equal As Numbers",
+      "time" : {
+        "start" : 1655165263053,
+        "stop" : 1655165263054,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "f331a5be908b974b",
+        "name" : "Keyword Log",
+        "source" : "f331a5be908b974b.html",
+        "type" : "text/html",
+        "size" : 79
+      } ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${response.status_code}"
+      }, {
+        "name" : "arg2",
+        "value" : "200"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "JsonValidator.Validate Jsonschema From File",
+      "time" : {
+        "start" : 1655165263054,
+        "stop" : 1655165263061,
+        "duration" : 7
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${response.json()}"
+      }, {
+        "name" : "arg2",
+        "value" : "${CART_SCHEMA}"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 8,
+    "attachmentsCount" : 6,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Schema-Tests"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestCarrinhosSchema"
+  }, {
+    "name" : "framework",
+    "value" : "robotframework"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "host",
+    "value" : "fv-az129-323"
+  }, {
+    "name" : "thread",
+    "value" : "default-39415bb5-fae8-4fb2-8fcc-6ae57a9f6f90"
+  }, {
+    "name" : "tag",
+    "value" : "@regression"
+  }, {
+    "name" : "tag",
+    "value" : "@schema"
+  }, {
+    "name" : "tag",
+    "value" : "@schema_tests"
+  }, {
+    "name" : "tag",
+    "value" : "@regression"
+  }, {
+    "name" : "tag",
+    "value" : "@schema"
+  }, {
+    "name" : "tag",
+    "value" : "@schema_tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 28,
+        "unknown" : 0,
+        "total" : 30
+      },
+      "items" : [ {
+        "uid" : "26da23bbdc36525c",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/135//#testresult/26da23bbdc36525c",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /carrinhos (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd410f3da90>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+        "time" : {
+          "start" : 1655163890825,
+          "stop" : 1655163891459,
+          "duration" : 634
+        }
+      }, {
+        "uid" : "e6cecf494bea4a49",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/133//#testresult/e6cecf494bea4a49",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654691306727,
+          "stop" : 1654691306918,
+          "duration" : 191
+        }
+      }, {
+        "uid" : "a302067421acd044",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/132//#testresult/a302067421acd044",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560913591,
+          "stop" : 1654560913842,
+          "duration" : 251
+        }
+      }, {
+        "uid" : "a55e47383f67648b",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/130//#testresult/a55e47383f67648b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560776763,
+          "stop" : 1654560777010,
+          "duration" : 247
+        }
+      }, {
+        "uid" : "ff413c90801bb00f",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/128//#testresult/ff413c90801bb00f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560515044,
+          "stop" : 1654560515236,
+          "duration" : 192
+        }
+      }, {
+        "uid" : "571b05e3df0cff1d",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/127//#testresult/571b05e3df0cff1d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560399697,
+          "stop" : 1654560399914,
+          "duration" : 217
+        }
+      }, {
+        "uid" : "bcaa70b7447e81c1",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/126//#testresult/bcaa70b7447e81c1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560337959,
+          "stop" : 1654560338118,
+          "duration" : 159
+        }
+      }, {
+        "uid" : "c51829d9cbae6309",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/125//#testresult/c51829d9cbae6309",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560243153,
+          "stop" : 1654560243392,
+          "duration" : 239
+        }
+      }, {
+        "uid" : "d2b2d17bc987efd",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/124//#testresult/d2b2d17bc987efd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560124468,
+          "stop" : 1654560124626,
+          "duration" : 158
+        }
+      }, {
+        "uid" : "e1e96cab10b1168",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/123//#testresult/e1e96cab10b1168",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654559678528,
+          "stop" : 1654559678737,
+          "duration" : 209
+        }
+      }, {
+        "uid" : "e317f14d91a25b1f",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/122//#testresult/e317f14d91a25b1f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654559425522,
+          "stop" : 1654559425682,
+          "duration" : 160
+        }
+      }, {
+        "uid" : "1da1c60426e0e125",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/121//#testresult/1da1c60426e0e125",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654559345447,
+          "stop" : 1654559345648,
+          "duration" : 201
+        }
+      }, {
+        "uid" : "497a68e4ea548029",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/120//#testresult/497a68e4ea548029",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654556715809,
+          "stop" : 1654556716038,
+          "duration" : 229
+        }
+      }, {
+        "uid" : "2993437cefa02b3a",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/118//#testresult/2993437cefa02b3a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654556673899,
+          "stop" : 1654556674155,
+          "duration" : 256
+        }
+      }, {
+        "uid" : "51d3ead7e41835a6",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/117//#testresult/51d3ead7e41835a6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654552810846,
+          "stop" : 1654552811080,
+          "duration" : 234
+        }
+      }, {
+        "uid" : "a81b85b8dfb5e01",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/116//#testresult/a81b85b8dfb5e01",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654552490888,
+          "stop" : 1654552491041,
+          "duration" : 153
+        }
+      }, {
+        "uid" : "2777f5fc1e38ae0e",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/115//#testresult/2777f5fc1e38ae0e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654552388491,
+          "stop" : 1654552392697,
+          "duration" : 4206
+        }
+      }, {
+        "uid" : "fb255985d6d896db",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/114//#testresult/fb255985d6d896db",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654551910001,
+          "stop" : 1654551910172,
+          "duration" : 171
+        }
+      }, {
+        "uid" : "a46603f20ec33863",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/113//#testresult/a46603f20ec33863",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654549986054,
+          "stop" : 1654549986223,
+          "duration" : 169
+        }
+      }, {
+        "uid" : "bc12e5230ad0d37e",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/112//#testresult/bc12e5230ad0d37e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654549564145,
+          "stop" : 1654549564275,
+          "duration" : 130
+        }
+      } ]
+    },
+    "tags" : [ "@schema", "@schema_tests", "@regression" ]
+  },
+  "source" : "d7d94e33edb967f4.json",
+  "parameterValues" : [ ]
+}

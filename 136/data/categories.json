@@ -1,0 +1,117 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+      "children" : [ {
+        "name" : "Successfully login",
+        "uid" : "fdd375b8cdd3056d",
+        "parentUid" : "914dc39651c319dd92c8b6abf199439e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655165268499,
+          "stop" : 1655165268541,
+          "duration" : 42
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Login with a non-exists email",
+        "uid" : "ba753cd886c37196",
+        "parentUid" : "914dc39651c319dd92c8b6abf199439e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655165268551,
+          "stop" : 1655165268568,
+          "duration" : 17
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Login with a non-exists email and password",
+        "uid" : "36743bee779a2706",
+        "parentUid" : "914dc39651c319dd92c8b6abf199439e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655165268578,
+          "stop" : 1655165268594,
+          "duration" : 16
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Login with a non-exists password",
+        "uid" : "bda531d0ca5497bb",
+        "parentUid" : "914dc39651c319dd92c8b6abf199439e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655165268603,
+          "stop" : 1655165268618,
+          "duration" : 15
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Login with an invalid email",
+        "uid" : "eb2b90439270143e",
+        "parentUid" : "914dc39651c319dd92c8b6abf199439e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655165268624,
+          "stop" : 1655165268636,
+          "duration" : 12
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Login with just the blank email",
+        "uid" : "c298ef3ed0c57bde",
+        "parentUid" : "914dc39651c319dd92c8b6abf199439e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655165268641,
+          "stop" : 1655165268653,
+          "duration" : 12
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Login with just the blank password",
+        "uid" : "9fd5342d1e697808",
+        "parentUid" : "914dc39651c319dd92c8b6abf199439e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655165268659,
+          "stop" : 1655165268671,
+          "duration" : 12
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Login with a blank email and password",
+        "uid" : "ac79788227376b6a",
+        "parentUid" : "914dc39651c319dd92c8b6abf199439e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655165268677,
+          "stop" : 1655165268690,
+          "duration" : 13
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "914dc39651c319dd92c8b6abf199439e"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
