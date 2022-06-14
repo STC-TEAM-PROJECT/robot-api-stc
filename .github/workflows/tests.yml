@@ -39,6 +39,9 @@ jobs:
       - name: Setup project
         uses: ./.github/actions/setup
 
+      - name: Start ServeRest locally
+        run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
+
       - name: Run integration tests
         run: make run-integration-tests-ci
         env:
