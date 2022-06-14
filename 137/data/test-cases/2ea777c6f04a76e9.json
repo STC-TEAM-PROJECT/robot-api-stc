@@ -1,0 +1,462 @@
+{
+  "uid" : "2ea777c6f04a76e9",
+  "name" : "Validate user API schema",
+  "fullName" : "Schema-Tests.TestUsuariosSchema.Validate user API schema",
+  "historyId" : "8691ead7afc47924cd0c41b3935fa30b",
+  "time" : {
+    "start" : 1655169084635,
+    "stop" : 1655169085250,
+    "duration" : 615
+  },
+  "status" : "failed",
+  "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /usuarios (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fab16f84b80>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+  "flaky" : true,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /usuarios (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fab16f84b80>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+    "steps" : [ {
+      "name" : "UsuarioKW.Search All Users",
+      "time" : {
+        "start" : 1655169084635,
+        "stop" : 1655169085248,
+        "duration" : 613
+      },
+      "status" : "failed",
+      "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /usuarios (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fab16f84b80>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "steps" : [ {
+        "name" : "BuiltIn.Create Dictionary",
+        "time" : {
+          "start" : 1655169084636,
+          "stop" : 1655169084636,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "e75a864a636bd0f4",
+          "name" : "Keyword Log",
+          "source" : "e75a864a636bd0f4.html",
+          "type" : "text/html",
+          "size" : 75
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "content-type=application/json"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "RequestsLibrary.Create Session",
+        "time" : {
+          "start" : 1655169084637,
+          "stop" : 1655169084637,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "b0ff8001d335d00b",
+          "name" : "Keyword Log",
+          "source" : "b0ff8001d335d00b.html",
+          "type" : "text/html",
+          "size" : 219
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "serveRest"
+        }, {
+          "name" : "arg2",
+          "value" : "${BASE_URL}"
+        }, {
+          "name" : "arg3",
+          "value" : "verify=True"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "RequestsLibrary.GET On Session",
+        "time" : {
+          "start" : 1655169084638,
+          "stop" : 1655169085246,
+          "duration" : 608
+        },
+        "status" : "failed",
+        "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /usuarios (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fab16f84b80>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "8e8c085703c94888",
+          "name" : "Keyword Log",
+          "source" : "8e8c085703c94888.html",
+          "type" : "text/html",
+          "size" : 1228
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "serveRest"
+        }, {
+          "name" : "arg2",
+          "value" : "/usuarios"
+        }, {
+          "name" : "arg3",
+          "value" : "headers=${headers}"
+        }, {
+          "name" : "arg4",
+          "value" : "expected_status=any"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      }, {
+        "name" : "BuiltIn.Log",
+        "time" : {
+          "start" : 1655169085247,
+          "stop" : 1655169085247,
+          "duration" : 0
+        },
+        "status" : "failed",
+        "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /usuarios (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fab16f84b80>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${response}"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      }, {
+        "name" : "BuiltIn.Set Test Variable",
+        "time" : {
+          "start" : 1655169085247,
+          "stop" : 1655169085248,
+          "duration" : 1
+        },
+        "status" : "failed",
+        "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /usuarios (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fab16f84b80>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${response}"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 5,
+      "attachmentsCount" : 3,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "BuiltIn.Should Be Equal As Strings",
+      "time" : {
+        "start" : 1655169085249,
+        "stop" : 1655169085249,
+        "duration" : 0
+      },
+      "status" : "failed",
+      "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /usuarios (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fab16f84b80>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${response.status_code}"
+      }, {
+        "name" : "arg2",
+        "value" : "200"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "JsonValidator.Validate Jsonschema From File",
+      "time" : {
+        "start" : 1655169085249,
+        "stop" : 1655169085249,
+        "duration" : 0
+      },
+      "status" : "failed",
+      "statusMessage" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /usuarios (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fab16f84b80>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${response.json()}"
+      }, {
+        "name" : "arg2",
+        "value" : "${USER_SCHEMA}"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 8,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Schema-Tests"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestUsuariosSchema"
+  }, {
+    "name" : "framework",
+    "value" : "robotframework"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "host",
+    "value" : "fv-az72-799"
+  }, {
+    "name" : "thread",
+    "value" : "default-99055aca-7351-4b60-afeb-ae7247661fbe"
+  }, {
+    "name" : "tag",
+    "value" : "@regression"
+  }, {
+    "name" : "tag",
+    "value" : "@schema"
+  }, {
+    "name" : "tag",
+    "value" : "@schema_tests"
+  }, {
+    "name" : "tag",
+    "value" : "@regression"
+  }, {
+    "name" : "tag",
+    "value" : "@schema"
+  }, {
+    "name" : "tag",
+    "value" : "@schema_tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 29,
+        "unknown" : 0,
+        "total" : 31
+      },
+      "items" : [ {
+        "uid" : "ea85149fcb4dbacc",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/136//#testresult/ea85149fcb4dbacc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655165263105,
+          "stop" : 1655165263123,
+          "duration" : 18
+        }
+      }, {
+        "uid" : "960a8a0d353541b0",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/135//#testresult/960a8a0d353541b0",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /usuarios (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd410ec2100>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+        "time" : {
+          "start" : 1655163892093,
+          "stop" : 1655163892708,
+          "duration" : 615
+        }
+      }, {
+        "uid" : "5ab26af3a5eee200",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/133//#testresult/5ab26af3a5eee200",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654691307034,
+          "stop" : 1654691307145,
+          "duration" : 111
+        }
+      }, {
+        "uid" : "7626596e5741704",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/132//#testresult/7626596e5741704",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560913988,
+          "stop" : 1654560914115,
+          "duration" : 127
+        }
+      }, {
+        "uid" : "5ccdfab39b628156",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/130//#testresult/5ccdfab39b628156",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560777147,
+          "stop" : 1654560777267,
+          "duration" : 120
+        }
+      }, {
+        "uid" : "cf46b3e9a7fcc20f",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/128//#testresult/cf46b3e9a7fcc20f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560515359,
+          "stop" : 1654560515458,
+          "duration" : 99
+        }
+      }, {
+        "uid" : "2bcc1ec91c47d916",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/127//#testresult/2bcc1ec91c47d916",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560400013,
+          "stop" : 1654560400098,
+          "duration" : 85
+        }
+      }, {
+        "uid" : "8d04a07853bfd21b",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/126//#testresult/8d04a07853bfd21b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560338230,
+          "stop" : 1654560338296,
+          "duration" : 66
+        }
+      }, {
+        "uid" : "d5bcb5092f89cfe3",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/125//#testresult/d5bcb5092f89cfe3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560243535,
+          "stop" : 1654560243654,
+          "duration" : 119
+        }
+      }, {
+        "uid" : "d26e26d52c68d603",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/124//#testresult/d26e26d52c68d603",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560124726,
+          "stop" : 1654560124809,
+          "duration" : 83
+        }
+      }, {
+        "uid" : "36b3fba9980cb028",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/123//#testresult/36b3fba9980cb028",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654559678836,
+          "stop" : 1654559678918,
+          "duration" : 82
+        }
+      }, {
+        "uid" : "e3a2cb72a6b8d6d2",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/122//#testresult/e3a2cb72a6b8d6d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654559425802,
+          "stop" : 1654559425888,
+          "duration" : 86
+        }
+      }, {
+        "uid" : "a6dc48a4fd85d16e",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/121//#testresult/a6dc48a4fd85d16e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654559345781,
+          "stop" : 1654559345903,
+          "duration" : 122
+        }
+      }, {
+        "uid" : "2a1dd846bb07a69c",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/120//#testresult/2a1dd846bb07a69c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654556716139,
+          "stop" : 1654556716219,
+          "duration" : 80
+        }
+      }, {
+        "uid" : "fdbb4f5f71b88f53",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/118//#testresult/fdbb4f5f71b88f53",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654556674284,
+          "stop" : 1654556674398,
+          "duration" : 114
+        }
+      }, {
+        "uid" : "718d28b6c1fbc507",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/117//#testresult/718d28b6c1fbc507",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654552811179,
+          "stop" : 1654552811256,
+          "duration" : 77
+        }
+      }, {
+        "uid" : "263321430017b044",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/116//#testresult/263321430017b044",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654552491141,
+          "stop" : 1654552491222,
+          "duration" : 81
+        }
+      }, {
+        "uid" : "e772a99739e9bafe",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/115//#testresult/e772a99739e9bafe",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654552392808,
+          "stop" : 1654552392893,
+          "duration" : 85
+        }
+      }, {
+        "uid" : "a92f6be3c6b0b579",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/114//#testresult/a92f6be3c6b0b579",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654551910283,
+          "stop" : 1654551910372,
+          "duration" : 89
+        }
+      }, {
+        "uid" : "a98fc8f960ae34a6",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/113//#testresult/a98fc8f960ae34a6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654549986328,
+          "stop" : 1654549986405,
+          "duration" : 77
+        }
+      } ]
+    },
+    "tags" : [ "@schema", "@schema_tests", "@regression" ]
+  },
+  "source" : "2ea777c6f04a76e9.json",
+  "parameterValues" : [ ]
+}

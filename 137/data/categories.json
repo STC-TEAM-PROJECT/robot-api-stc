@@ -1,0 +1,192 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /carrinhos (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fab16fffb50>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "children" : [ {
+        "name" : "Validate car API schema",
+        "uid" : "e5e0809ef5bf9c9d",
+        "parentUid" : "fc78dd8a19de09d2e74eb020f7d50dc3",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655169083347,
+          "stop" : 1655169083996,
+          "duration" : 649
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fc78dd8a19de09d2e74eb020f7d50dc3"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /produtos (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fab16f26940>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "children" : [ {
+        "name" : "Validate products API",
+        "uid" : "d09222dd74a804ae",
+        "parentUid" : "1569aff24afeeae8089cd587016ef883",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655169084009,
+          "stop" : 1655169084625,
+          "duration" : 616
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1569aff24afeeae8089cd587016ef883"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /usuarios (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fab16f84b80>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "children" : [ {
+        "name" : "Validate user API schema",
+        "uid" : "2ea777c6f04a76e9",
+        "parentUid" : "970a600a33b6b34bc47978dbf849bd69",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655169084635,
+          "stop" : 1655169085250,
+          "duration" : 615
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "970a600a33b6b34bc47978dbf849bd69"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8f80019610>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "children" : [ {
+        "name" : "Successfully login",
+        "uid" : "b4c5ecae90f653dc",
+        "parentUid" : "62130b2e73099ee5a4006ff62d1e1e8a",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655169086530,
+          "stop" : 1655169087187,
+          "duration" : 657
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "62130b2e73099ee5a4006ff62d1e1e8a"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8f7ff2af70>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "children" : [ {
+        "name" : "Login with a non-exists email",
+        "uid" : "aca40b34edb03028",
+        "parentUid" : "2cc02b0d1b6d4ec24736886ad325519a",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655169087191,
+          "stop" : 1655169087807,
+          "duration" : 616
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2cc02b0d1b6d4ec24736886ad325519a"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8f7fecb610>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "children" : [ {
+        "name" : "Login with a non-exists email and password",
+        "uid" : "4105f7816e6a0ec7",
+        "parentUid" : "58559038c814bc84e38ba641342ddb3a",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655169087811,
+          "stop" : 1655169088427,
+          "duration" : 616
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Login with just the blank password",
+        "uid" : "7767facc27e5e5f7",
+        "parentUid" : "58559038c814bc84e38ba641342ddb3a",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655169090293,
+          "stop" : 1655169090909,
+          "duration" : 616
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "58559038c814bc84e38ba641342ddb3a"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8f7ff31b80>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "children" : [ {
+        "name" : "Login with a non-exists password",
+        "uid" : "301249f9d188e50f",
+        "parentUid" : "5316f9f54d7521d7aa555b31fb729939",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655169088431,
+          "stop" : 1655169089046,
+          "duration" : 615
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5316f9f54d7521d7aa555b31fb729939"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8f7fefdd30>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "children" : [ {
+        "name" : "Login with an invalid email",
+        "uid" : "ddd414b41081bd34",
+        "parentUid" : "31d313557133ce842d047a9d011ac14b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655169089051,
+          "stop" : 1655169089667,
+          "duration" : 616
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "31d313557133ce842d047a9d011ac14b"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8f7fe92e50>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "children" : [ {
+        "name" : "Login with just the blank email",
+        "uid" : "d3c3cd33a7ab4dcd",
+        "parentUid" : "da01d33d55e8d98ed3cf2ec55d8b76b3",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655169089671,
+          "stop" : 1655169090289,
+          "duration" : 618
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "da01d33d55e8d98ed3cf2ec55d8b76b3"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8f80056d30>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "children" : [ {
+        "name" : "Login with a blank email and password",
+        "uid" : "76ac5d078bbdd3d8",
+        "parentUid" : "55df1aaac1e3b51c4cf379165656e4ca",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655169090913,
+          "stop" : 1655169091529,
+          "duration" : 616
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "55df1aaac1e3b51c4cf379165656e4ca"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
