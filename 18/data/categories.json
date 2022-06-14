@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "Resolving variable '${response.json()[\"produtos\"][0][\"nome\"]}' failed: IndexError: list index out of range",
+      "children" : [ {
+        "name" : "Successfully validating product by Description And Name",
+        "uid" : "9ba906ba1365a877",
+        "parentUid" : "0b3e3f396a03fb2217c55edb69505a39",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655222517947,
+          "stop" : 1655222517962,
+          "duration" : 15
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0b3e3f396a03fb2217c55edb69505a39"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}

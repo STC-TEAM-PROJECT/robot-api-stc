@@ -1,0 +1,566 @@
+{
+  "uid" : "a2f0d089606c689b",
+  "name" : "Successfully login",
+  "fullName" : "Integration-Tests.Login.TestLogin.Successfully login",
+  "historyId" : "596e0a18e065511f1cb60faf11bf1bfd",
+  "time" : {
+    "start" : 1655222517655,
+    "stop" : 1655222517705,
+    "duration" : 50
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "LoginKW.Login",
+      "time" : {
+        "start" : 1655222517656,
+        "stop" : 1655222517698,
+        "duration" : 42
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "BuiltIn.Create Dictionary",
+        "time" : {
+          "start" : 1655222517656,
+          "stop" : 1655222517657,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "ed1dab947fbb4c90",
+          "name" : "Keyword Log",
+          "source" : "ed1dab947fbb4c90.html",
+          "type" : "text/html",
+          "size" : 75
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "content-type=application/json"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "BuiltIn.Create Dictionary",
+        "time" : {
+          "start" : 1655222517657,
+          "stop" : 1655222517658,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "9b55dab3c0a8eb3d",
+          "name" : "Keyword Log",
+          "source" : "9b55dab3c0a8eb3d.html",
+          "type" : "text/html",
+          "size" : 83
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "email=${email}"
+        }, {
+          "name" : "arg2",
+          "value" : "password=${password}"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "RequestsLibrary.Create Session",
+        "time" : {
+          "start" : 1655222517658,
+          "stop" : 1655222517659,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "b61c31538d3c559e",
+          "name" : "Keyword Log",
+          "source" : "b61c31538d3c559e.html",
+          "type" : "text/html",
+          "size" : 219
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "serveRest"
+        }, {
+          "name" : "arg2",
+          "value" : "${BASE_URL}"
+        }, {
+          "name" : "arg3",
+          "value" : "verify=True"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "RequestsLibrary.POST On Session",
+        "time" : {
+          "start" : 1655222517659,
+          "stop" : 1655222517696,
+          "duration" : 37
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "c798ea2181b5728b",
+          "name" : "Keyword Log",
+          "source" : "c798ea2181b5728b.html",
+          "type" : "text/html",
+          "size" : 1331
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "serveRest"
+        }, {
+          "name" : "arg2",
+          "value" : "/login"
+        }, {
+          "name" : "arg3",
+          "value" : "json=${body}"
+        }, {
+          "name" : "arg4",
+          "value" : "headers=${headers}"
+        }, {
+          "name" : "arg5",
+          "value" : "expected_status=any"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "BuiltIn.Log",
+        "time" : {
+          "start" : 1655222517696,
+          "stop" : 1655222517697,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "2562d781f07b05c3",
+          "name" : "Keyword Log",
+          "source" : "2562d781f07b05c3.html",
+          "type" : "text/html",
+          "size" : 42
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${response}"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "BuiltIn.Set Test Variable",
+        "time" : {
+          "start" : 1655222517697,
+          "stop" : 1655222517698,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "b8df169fd5be0823",
+          "name" : "Keyword Log",
+          "source" : "b8df169fd5be0823.html",
+          "type" : "text/html",
+          "size" : 56
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${response}"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${EXISTING_EMAIL}"
+      }, {
+        "name" : "arg2",
+        "value" : "${EXISTING_PASSWORD}"
+      } ],
+      "stepsCount" : 6,
+      "attachmentsCount" : 6,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "BuiltIn.Should Be Equal As Numbers",
+      "time" : {
+        "start" : 1655222517699,
+        "stop" : 1655222517700,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "42652431c31e3c7a",
+        "name" : "Keyword Log",
+        "source" : "42652431c31e3c7a.html",
+        "type" : "text/html",
+        "size" : 79
+      } ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${response.status_code}"
+      }, {
+        "name" : "arg2",
+        "value" : "200"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "BuiltIn.Should Be Equal As Strings",
+      "time" : {
+        "start" : 1655222517700,
+        "stop" : 1655222517701,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${response.json()['message']}"
+      }, {
+        "name" : "arg2",
+        "value" : "${MSG_LOGIN_SUCCESS}"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "BuiltIn.Should Not Be Empty",
+      "time" : {
+        "start" : 1655222517701,
+        "stop" : 1655222517702,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "b4ee4f541a72dbd4",
+        "name" : "Keyword Log",
+        "source" : "b4ee4f541a72dbd4.html",
+        "type" : "text/html",
+        "size" : 39
+      } ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${response.json()['authorization']}"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "BuiltIn.Set Global Variable",
+      "time" : {
+        "start" : 1655222517702,
+        "stop" : 1655222517704,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "4ec08cfb579108d7",
+        "name" : "Keyword Log",
+        "source" : "4ec08cfb579108d7.html",
+        "type" : "text/html",
+        "size" : 229
+      } ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${TOKEN}"
+      }, {
+        "name" : "arg2",
+        "value" : "${response.json()['authorization']}"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 11,
+    "attachmentsCount" : 9,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Integration-Tests"
+  }, {
+    "name" : "suite",
+    "value" : "Login"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "framework",
+    "value" : "robotframework"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "host",
+    "value" : "fv-az96-442"
+  }, {
+    "name" : "thread",
+    "value" : "default-afbbc905-bd9f-4021-a3d8-03fce435b585"
+  }, {
+    "name" : "tag",
+    "value" : "@integration_tests"
+  }, {
+    "name" : "tag",
+    "value" : "@login"
+  }, {
+    "name" : "tag",
+    "value" : "@regression"
+  }, {
+    "name" : "tag",
+    "value" : "@integration_tests"
+  }, {
+    "name" : "tag",
+    "value" : "@login"
+  }, {
+    "name" : "tag",
+    "value" : "@regression"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 10,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 12,
+        "unknown" : 0,
+        "total" : 22
+      },
+      "items" : [ {
+        "uid" : "9bd0df78038d99b9",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/16//#testresult/9bd0df78038d99b9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655222198192,
+          "stop" : 1655222198240,
+          "duration" : 48
+        }
+      }, {
+        "uid" : "f0a4c26d750bb0f9",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/11//#testresult/f0a4c26d750bb0f9",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+        "time" : {
+          "start" : 1655220969025,
+          "stop" : 1655220969089,
+          "duration" : 64
+        }
+      }, {
+        "uid" : "f923b3affdaa6751",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/10//#testresult/f923b3affdaa6751",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1f25527a00>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+        "time" : {
+          "start" : 1655220751137,
+          "stop" : 1655220751791,
+          "duration" : 654
+        }
+      }, {
+        "uid" : "756730994b00fc10",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/9//#testresult/756730994b00fc10",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655219661436,
+          "stop" : 1655219661595,
+          "duration" : 159
+        }
+      }, {
+        "uid" : "9295e20ab1391030",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/8//#testresult/9295e20ab1391030",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655218422320,
+          "stop" : 1655218422517,
+          "duration" : 197
+        }
+      }, {
+        "uid" : "602df9c78fddac34",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/7//#testresult/602df9c78fddac34",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655217743304,
+          "stop" : 1655217743475,
+          "duration" : 171
+        }
+      }, {
+        "uid" : "c169fda466412377",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/5//#testresult/c169fda466412377",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+        "time" : {
+          "start" : 1655217409203,
+          "stop" : 1655217409279,
+          "duration" : 76
+        }
+      }, {
+        "uid" : "73d22d89973c26bb",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/4//#testresult/73d22d89973c26bb",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+        "time" : {
+          "start" : 1655217114689,
+          "stop" : 1655217114774,
+          "duration" : 85
+        }
+      }, {
+        "uid" : "321d964eb63096fa",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/3//#testresult/321d964eb63096fa",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+        "time" : {
+          "start" : 1655216712330,
+          "stop" : 1655216712391,
+          "duration" : 61
+        }
+      }, {
+        "uid" : "da8ecc4e68585525",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/138//#testresult/da8ecc4e68585525",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+        "time" : {
+          "start" : 1655212683266,
+          "stop" : 1655212683305,
+          "duration" : 39
+        }
+      }, {
+        "uid" : "b4c5ecae90f653dc",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/137//#testresult/b4c5ecae90f653dc",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8f80019610>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+        "time" : {
+          "start" : 1655169086530,
+          "stop" : 1655169087187,
+          "duration" : 657
+        }
+      }, {
+        "uid" : "fdd375b8cdd3056d",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/136//#testresult/fdd375b8cdd3056d",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+        "time" : {
+          "start" : 1655165268499,
+          "stop" : 1655165268541,
+          "duration" : 42
+        }
+      }, {
+        "uid" : "3418beca253bd6f5",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/135//#testresult/3418beca253bd6f5",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+        "time" : {
+          "start" : 1655163904953,
+          "stop" : 1655163905003,
+          "duration" : 50
+        }
+      }, {
+        "uid" : "1ac51b9a50dab0ac",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/133//#testresult/1ac51b9a50dab0ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654691311480,
+          "stop" : 1654691311725,
+          "duration" : 245
+        }
+      }, {
+        "uid" : "5db4b8bc17f44100",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/132//#testresult/5db4b8bc17f44100",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560904009,
+          "stop" : 1654560904176,
+          "duration" : 167
+        }
+      }, {
+        "uid" : "831f976e06eaba0d",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/130//#testresult/831f976e06eaba0d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560782212,
+          "stop" : 1654560782483,
+          "duration" : 271
+        }
+      }, {
+        "uid" : "dd1dec511bb1daa",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/128//#testresult/dd1dec511bb1daa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560499794,
+          "stop" : 1654560499928,
+          "duration" : 134
+        }
+      }, {
+        "uid" : "299a6502a9c36cb6",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/127//#testresult/299a6502a9c36cb6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560396571,
+          "stop" : 1654560396828,
+          "duration" : 257
+        }
+      }, {
+        "uid" : "94ed26a010970eec",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/126//#testresult/94ed26a010970eec",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560334730,
+          "stop" : 1654560334891,
+          "duration" : 161
+        }
+      }, {
+        "uid" : "2ce68c2fe6eec4f",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/125//#testresult/2ce68c2fe6eec4f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560245658,
+          "stop" : 1654560245897,
+          "duration" : 239
+        }
+      } ]
+    },
+    "tags" : [ "@login", "@regression", "@integration_tests" ]
+  },
+  "source" : "a2f0d089606c689b.json",
+  "parameterValues" : [ ]
+}
