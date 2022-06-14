@@ -18,20 +18,17 @@ jobs:
       - name: Start ServeRest locally
         run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
 
+      - name: Sleep for 10 seconds
+        uses: jakejarvis/wait-action@master
+        with:
+          time: '10s'
+
       - name: Run schema tests
         if: always()
         run: make run-all-schema
         continue-on-error: true
         env:
           FORCE_COLOR: 2
-
-      - name: Wait for setup to succeed
-        uses: lewagon/wait-on-check-action@v1.0.0
-        with:
-          ref: ${{ github.ref }}
-          check-name: 'Start ServeRest locally'
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          wait-interval: 10
 
       - name: Upload Allure report
         uses: actions/upload-artifact@v1
@@ -51,20 +48,17 @@ jobs:
       - name: Start ServeRest locally
         run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
 
+      - name: Sleep for 10 seconds
+        uses: jakejarvis/wait-action@master
+        with:
+          time: '10s'
+
       - name: Run integration tests
         if: always()
         run: make run-all-integration
         continue-on-error: true
         env:
           FORCE_COLOR: 2
-
-      - name: Wait for setup to succeed
-        uses: lewagon/wait-on-check-action@v1.0.0
-        with:
-          ref: ${{ github.ref }}
-          check-name: 'Start ServeRest locally'
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          wait-interval: 10
 
       - name: Upload Allure report
         uses: actions/upload-artifact@v1
