@@ -15,9 +15,12 @@ jobs:
       - name: Setup project
         uses: ./.github/actions/setup
 
+      - name: Start ServeRest locally
+        run: npx serverest
+
       - name: Run schema tests
         if: always()
-        run: ENV=dev make run-all-schema
+        run: run-all-schema
         continue-on-error: true
         env:
           FORCE_COLOR: 2
@@ -38,11 +41,11 @@ jobs:
         uses: ./.github/actions/setup
       
       - name: Start ServeRest locally
-        run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
+        run: npx serverest
 
       - name: Run integration tests
         if: always()
-        run: ENV=dev make run-all-integration
+        run: run-all-integration
         continue-on-error: true
         env:
           FORCE_COLOR: 2
