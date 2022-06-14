@@ -1,0 +1,422 @@
+{
+  "uid" : "c98e8cdf92d37eec",
+  "name" : "Unsuccessfully validating product by Description",
+  "fullName" : "Integration-Tests.Produtos.TestProdutos.Unsuccessfully validating product by Description",
+  "historyId" : "c065e8f71efca26f09814a3d0d461d00",
+  "time" : {
+    "start" : 1655248657587,
+    "stop" : 1655248657600,
+    "duration" : 13
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "ProdutoKW.Search Products By Parameters",
+      "time" : {
+        "start" : 1655248657588,
+        "stop" : 1655248657598,
+        "duration" : 10
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "BuiltIn.Create Dictionary",
+        "time" : {
+          "start" : 1655248657589,
+          "stop" : 1655248657589,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "804b3f3b0e78c798",
+          "name" : "Keyword Log",
+          "source" : "804b3f3b0e78c798.html",
+          "type" : "text/html",
+          "size" : 75
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "content-type=application/json"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "RequestsLibrary.Create Session",
+        "time" : {
+          "start" : 1655248657589,
+          "stop" : 1655248657590,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "6f959137c901b145",
+          "name" : "Keyword Log",
+          "source" : "6f959137c901b145.html",
+          "type" : "text/html",
+          "size" : 219
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "serveRest"
+        }, {
+          "name" : "arg2",
+          "value" : "${BASE_URL}"
+        }, {
+          "name" : "arg3",
+          "value" : "verify=True"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "RequestsLibrary.GET On Session",
+        "time" : {
+          "start" : 1655248657590,
+          "stop" : 1655248657596,
+          "duration" : 6
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "97e3731d104811c4",
+          "name" : "Keyword Log",
+          "source" : "97e3731d104811c4.html",
+          "type" : "text/html",
+          "size" : 1159
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "serveRest"
+        }, {
+          "name" : "arg2",
+          "value" : "/produtos"
+        }, {
+          "name" : "arg3",
+          "value" : "headers=${headers}"
+        }, {
+          "name" : "arg4",
+          "value" : "params=${params}&${others_params}"
+        }, {
+          "name" : "arg5",
+          "value" : "expected_status=any"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "BuiltIn.Log",
+        "time" : {
+          "start" : 1655248657596,
+          "stop" : 1655248657596,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "721162be7feec294",
+          "name" : "Keyword Log",
+          "source" : "721162be7feec294.html",
+          "type" : "text/html",
+          "size" : 42
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${response}"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "BuiltIn.Set Test Variable",
+        "time" : {
+          "start" : 1655248657597,
+          "stop" : 1655248657597,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "3f17bd79409bbaa9",
+          "name" : "Keyword Log",
+          "source" : "3f17bd79409bbaa9.html",
+          "type" : "text/html",
+          "size" : 56
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${response}"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "descricao=Non-existent description"
+      } ],
+      "stepsCount" : 5,
+      "attachmentsCount" : 5,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "BuiltIn.Should Be Equal As Strings",
+      "time" : {
+        "start" : 1655248657598,
+        "stop" : 1655248657599,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "4653793279e6be98",
+        "name" : "Keyword Log",
+        "source" : "4653793279e6be98.html",
+        "type" : "text/html",
+        "size" : 79
+      } ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${response.status_code}"
+      }, {
+        "name" : "arg2",
+        "value" : "200"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "BuiltIn.Should Be Equal As Strings",
+      "time" : {
+        "start" : 1655248657599,
+        "stop" : 1655248657600,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "93a2848d24291ad3",
+        "name" : "Keyword Log",
+        "source" : "93a2848d24291ad3.html",
+        "type" : "text/html",
+        "size" : 79
+      } ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${response.json()[\"quantidade\"]}"
+      }, {
+        "name" : "arg2",
+        "value" : "0"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 8,
+    "attachmentsCount" : 7,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Integration-Tests"
+  }, {
+    "name" : "suite",
+    "value" : "Produtos"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProdutos"
+  }, {
+    "name" : "framework",
+    "value" : "robotframework"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "host",
+    "value" : "fv-az177-900"
+  }, {
+    "name" : "thread",
+    "value" : "default-cd956f97-584e-4e56-93be-bde7d28a26c9"
+  }, {
+    "name" : "tag",
+    "value" : "@integration_tests"
+  }, {
+    "name" : "tag",
+    "value" : "@produtos"
+  }, {
+    "name" : "tag",
+    "value" : "@regression"
+  }, {
+    "name" : "tag",
+    "value" : "@integration_tests"
+  }, {
+    "name" : "tag",
+    "value" : "@produtos"
+  }, {
+    "name" : "tag",
+    "value" : "@regression"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 11,
+        "unknown" : 0,
+        "total" : 14
+      },
+      "items" : [ {
+        "uid" : "b990e6b5aff09df5",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/23//#testresult/b990e6b5aff09df5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655247786473,
+          "stop" : 1655247786485,
+          "duration" : 12
+        }
+      }, {
+        "uid" : "bdd57f581758c246",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/22//#testresult/bdd57f581758c246",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655223506937,
+          "stop" : 1655223506952,
+          "duration" : 15
+        }
+      }, {
+        "uid" : "7d1f9217a3e8f42f",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/20//#testresult/7d1f9217a3e8f42f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655223175961,
+          "stop" : 1655223175978,
+          "duration" : 17
+        }
+      }, {
+        "uid" : "98df17dcf99db184",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/18//#testresult/98df17dcf99db184",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655222517997,
+          "stop" : 1655222518010,
+          "duration" : 13
+        }
+      }, {
+        "uid" : "b418123a9042913",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/16//#testresult/b418123a9042913",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655222198523,
+          "stop" : 1655222198535,
+          "duration" : 12
+        }
+      }, {
+        "uid" : "f120acbe876fc461",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/11//#testresult/f120acbe876fc461",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655220970013,
+          "stop" : 1655220970027,
+          "duration" : 14
+        }
+      }, {
+        "uid" : "b998d845c904a9bf",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/10//#testresult/b998d845c904a9bf",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos?descricao=Non-existent%20description& (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1f2533ec10>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+        "time" : {
+          "start" : 1655220760490,
+          "stop" : 1655220761107,
+          "duration" : 617
+        }
+      }, {
+        "uid" : "cea82def363943b",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/9//#testresult/cea82def363943b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655219663048,
+          "stop" : 1655219663141,
+          "duration" : 93
+        }
+      }, {
+        "uid" : "c11301bf804f002c",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/8//#testresult/c11301bf804f002c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655218423695,
+          "stop" : 1655218423772,
+          "duration" : 77
+        }
+      }, {
+        "uid" : "e43e588260c06679",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/7//#testresult/e43e588260c06679",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655217744936,
+          "stop" : 1655217745033,
+          "duration" : 97
+        }
+      }, {
+        "uid" : "150dc1f65df76461",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/5//#testresult/150dc1f65df76461",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos?descricao=Non-existent%20description& (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+        "time" : {
+          "start" : 1655217413738,
+          "stop" : 1655217414355,
+          "duration" : 617
+        }
+      }, {
+        "uid" : "d0d02b252b2bc239",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/4//#testresult/d0d02b252b2bc239",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos?descricao=Non-existent%20description& (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+        "time" : {
+          "start" : 1655217119267,
+          "stop" : 1655217119884,
+          "duration" : 617
+        }
+      }, {
+        "uid" : "6b5918c60b94b089",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/3//#testresult/6b5918c60b94b089",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655216713342,
+          "stop" : 1655216713360,
+          "duration" : 18
+        }
+      } ]
+    },
+    "tags" : [ "@regression", "@integration_tests", "@produtos" ]
+  },
+  "source" : "c98e8cdf92d37eec.json",
+  "parameterValues" : [ ]
+}
