@@ -1,0 +1,355 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /carrinhos (Caused by ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))",
+      "children" : [ {
+        "name" : "Validate car API schema",
+        "uid" : "f67baa82234ae6d",
+        "parentUid" : "76081bffc49a29dc4f2aba4222544706",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217084797,
+          "stop" : 1655217085446,
+          "duration" : 649
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "76081bffc49a29dc4f2aba4222544706"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+      "children" : [ {
+        "name" : "Validate products API",
+        "uid" : "8b7f0614b38badb9",
+        "parentUid" : "ee6e58ff1edb2c6e27a26139756bd40d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217085469,
+          "stop" : 1655217086095,
+          "duration" : 626
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Successfully validating product",
+        "uid" : "f3cf735c4547c015",
+        "parentUid" : "ee6e58ff1edb2c6e27a26139756bd40d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217114926,
+          "stop" : 1655217115541,
+          "duration" : 615
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ee6e58ff1edb2c6e27a26139756bd40d"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /usuarios (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+      "children" : [ {
+        "name" : "Validate user API schema",
+        "uid" : "bb852855a720609",
+        "parentUid" : "6f6ba1ef1a3e4cfb670b8bfbf7434893",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217086113,
+          "stop" : 1655217086731,
+          "duration" : 618
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6f6ba1ef1a3e4cfb670b8bfbf7434893"
+    }, {
+      "name" : "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+      "children" : [ {
+        "name" : "Successfully login",
+        "uid" : "73d22d89973c26bb",
+        "parentUid" : "fef007aaa958a116ed6fb1238a0b56be",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217114689,
+          "stop" : 1655217114774,
+          "duration" : 85
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fef007aaa958a116ed6fb1238a0b56be"
+    }, {
+      "name" : "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+      "children" : [ {
+        "name" : "Login with a non-exists email",
+        "uid" : "9c1abf7a5a42ed6c",
+        "parentUid" : "914dc39651c319dd92c8b6abf199439e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217114779,
+          "stop" : 1655217114798,
+          "duration" : 19
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Login with a non-exists email and password",
+        "uid" : "e04cd4c6ad3cdf7d",
+        "parentUid" : "914dc39651c319dd92c8b6abf199439e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217114802,
+          "stop" : 1655217114816,
+          "duration" : 14
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Login with a non-exists password",
+        "uid" : "7a04e8b8d050988",
+        "parentUid" : "914dc39651c319dd92c8b6abf199439e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217114820,
+          "stop" : 1655217114838,
+          "duration" : 18
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Login with an invalid email",
+        "uid" : "c8d88ab7a357a4fd",
+        "parentUid" : "914dc39651c319dd92c8b6abf199439e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217114842,
+          "stop" : 1655217114858,
+          "duration" : 16
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Login with just the blank email",
+        "uid" : "a0509b85a6676cf4",
+        "parentUid" : "914dc39651c319dd92c8b6abf199439e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217114862,
+          "stop" : 1655217114877,
+          "duration" : 15
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Login with just the blank password",
+        "uid" : "e81dd3db79a19827",
+        "parentUid" : "914dc39651c319dd92c8b6abf199439e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217114880,
+          "stop" : 1655217114891,
+          "duration" : 11
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Login with a blank email and password",
+        "uid" : "c1fa14de61cf80d7",
+        "parentUid" : "914dc39651c319dd92c8b6abf199439e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217114895,
+          "stop" : 1655217114906,
+          "duration" : 11
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "914dc39651c319dd92c8b6abf199439e"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos/BeeJh5lz3k6kSIzA (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+      "children" : [ {
+        "name" : "Successfully validating product by ID in the URL",
+        "uid" : "e64e533b96e63f2e",
+        "parentUid" : "f4a639da9adf36b284ad74c70e05ac6c",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217115545,
+          "stop" : 1655217116162,
+          "duration" : 617
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f4a639da9adf36b284ad74c70e05ac6c"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos?_id=K6leHdftCeOJj8BJ& (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+      "children" : [ {
+        "name" : "Successfully validating product by ID",
+        "uid" : "6dce5acb8f6af27a",
+        "parentUid" : "44558607ee712132d8dc8d84fedcd442",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217116165,
+          "stop" : 1655217116782,
+          "duration" : 617
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "44558607ee712132d8dc8d84fedcd442"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos?nome=Samsung%2060%20polegadas& (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+      "children" : [ {
+        "name" : "Successfully validating product by Name",
+        "uid" : "40132700f9e9dfb9",
+        "parentUid" : "c8f984080de086a3470f1d6e63a9e5de",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217116786,
+          "stop" : 1655217117402,
+          "duration" : 616
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c8f984080de086a3470f1d6e63a9e5de"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos?nome=Samsung%2060%20polegadas&descricao=TV (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+      "children" : [ {
+        "name" : "Successfully validating product by Description And Name",
+        "uid" : "71380524db2052fe",
+        "parentUid" : "a39c67b8fe82dc0bcc80434c403b4a46",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217117406,
+          "stop" : 1655217118022,
+          "duration" : 616
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a39c67b8fe82dc0bcc80434c403b4a46"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos/BeeJh5lz3k6kSIzB (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+      "children" : [ {
+        "name" : "Unsuccessfully validating product by ID in the URL",
+        "uid" : "500f9a14c963a200",
+        "parentUid" : "1ac8626ece62d96fe74849700dd8f16d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217118026,
+          "stop" : 1655217118642,
+          "duration" : 616
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1ac8626ece62d96fe74849700dd8f16d"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos?nome=Non-existent%20products& (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+      "children" : [ {
+        "name" : "Unsuccessfully validating product by Name",
+        "uid" : "80b9e952cad64e6d",
+        "parentUid" : "a8e87d4615d68296c65b5d137b56755f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217118646,
+          "stop" : 1655217119263,
+          "duration" : 617
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a8e87d4615d68296c65b5d137b56755f"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos?descricao=Non-existent%20description& (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+      "children" : [ {
+        "name" : "Unsuccessfully validating product by Description",
+        "uid" : "d0d02b252b2bc239",
+        "parentUid" : "3534907130ccb80204a971c068d1622f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217119267,
+          "stop" : 1655217119884,
+          "duration" : 617
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3534907130ccb80204a971c068d1622f"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos?preco=Non-existent%20price& (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+      "children" : [ {
+        "name" : "Successfully validating that the price must be a number",
+        "uid" : "2726b6b8cd4b0fbd",
+        "parentUid" : "5bd644c9dfa79538ffb7125ca08bb82c",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217119887,
+          "stop" : 1655217120504,
+          "duration" : 617
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5bd644c9dfa79538ffb7125ca08bb82c"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos?preco=0.5& (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+      "children" : [ {
+        "name" : "Successfully validating that the price must be an integer",
+        "uid" : "2b9180175af13df5",
+        "parentUid" : "60ab140267b0310e92dcc923428dc13d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217120508,
+          "stop" : 1655217121125,
+          "duration" : 617
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "60ab140267b0310e92dcc923428dc13d"
+    }, {
+      "name" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3030): Max retries exceeded with url: /produtos?nome=Samsung%2060%20polegadas&descricao=incorrect (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+      "children" : [ {
+        "name" : "Unsuccessfully validating product by Description And Name",
+        "uid" : "db6296108cf352c4",
+        "parentUid" : "f30d5cab2e3c153a7eb9304348372f54",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655217121128,
+          "stop" : 1655217121744,
+          "duration" : 616
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f30d5cab2e3c153a7eb9304348372f54"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
