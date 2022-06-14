@@ -18,17 +18,10 @@ jobs:
       - name: Start ServeRest locally
         run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
 
-      - name: Wait for Docker configuration
-        uses: lewagon/wait-on-check-action@v1.0.0
-        with:
-          check-name: Start ServeRest locally
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          wait-interval: 10
-
-      - name: Run tests
-        if: always()
-        run: ENV=local make run-all-schema
-        continue-on-error: true
+      - name: Run schema tests
+        run: make run-schema-tests-ci
+        env:
+          FORCE_COLOR: 2
 
       - name: Upload Allure report
         uses: actions/upload-artifact@v1
@@ -38,6 +31,7 @@ jobs:
   
   robot_integration_tests:
     name: robot integration tests
+    needs: [robot_schema_tests]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -48,17 +42,10 @@ jobs:
       - name: Start ServeRest locally
         run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
 
-      - name: Wait for Docker configuration
-        uses: lewagon/wait-on-check-action@v1.0.0
-        with:
-          check-name: Start ServeRest locally
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          wait-interval: 10
-
-      - name: Run tests
-        if: always()
-        run: ENV=local make run-all-integration
-        continue-on-error: true
+      - name: Run integration tests
+        run: make run-integration-tests-ci
+        env:
+          FORCE_COLOR: 2
 
       - name: Upload Allure report
         uses: actions/upload-artifact@v1
