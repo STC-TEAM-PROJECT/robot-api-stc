@@ -15,6 +15,9 @@ jobs:
       - name: Setup project
         uses: ./.github/actions/setup
 
+      - name: Start ServeRest locally
+        run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
+
       - name: Run tests
         if: always()
         run: env=local make run-all-schema
