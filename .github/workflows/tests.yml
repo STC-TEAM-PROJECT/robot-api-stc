@@ -19,7 +19,9 @@ jobs:
         run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
 
       - name: Run schema tests
+        if: always()
         run: make run-schema-tests-ci
+        continue-on-error: true
         env:
           FORCE_COLOR: 2
 
@@ -43,7 +45,9 @@ jobs:
         run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
 
       - name: Run integration tests
+        if: always()
         run: make run-integration-tests-ci
+        continue-on-error: true
         env:
           FORCE_COLOR: 2
 
