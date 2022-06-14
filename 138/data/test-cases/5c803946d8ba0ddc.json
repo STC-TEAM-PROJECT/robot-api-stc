@@ -1,0 +1,422 @@
+{
+  "uid" : "5c803946d8ba0ddc",
+  "name" : "Login with a non-exists password",
+  "fullName" : "Integration-Tests.Login.TestLogin.Login with a non-exists password",
+  "historyId" : "b8fe79d513f64fe5a1ae2747a90da7f7",
+  "time" : {
+    "start" : 1655212683352,
+    "stop" : 1655212683364,
+    "duration" : 12
+  },
+  "status" : "failed",
+  "statusMessage" : "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+    "steps" : [ {
+      "name" : "LoginKW.Login",
+      "time" : {
+        "start" : 1655212683352,
+        "stop" : 1655212683363,
+        "duration" : 11
+      },
+      "status" : "failed",
+      "statusMessage" : "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+      "steps" : [ {
+        "name" : "BuiltIn.Create Dictionary",
+        "time" : {
+          "start" : 1655212683353,
+          "stop" : 1655212683353,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "1e5fb905f241d816",
+          "name" : "Keyword Log",
+          "source" : "1e5fb905f241d816.html",
+          "type" : "text/html",
+          "size" : 75
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "content-type=application/json"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "BuiltIn.Create Dictionary",
+        "time" : {
+          "start" : 1655212683354,
+          "stop" : 1655212683355,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "4195830039214ec2",
+          "name" : "Keyword Log",
+          "source" : "4195830039214ec2.html",
+          "type" : "text/html",
+          "size" : 97
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "email=${email}"
+        }, {
+          "name" : "arg2",
+          "value" : "password=${password}"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "RequestsLibrary.Create Session",
+        "time" : {
+          "start" : 1655212683355,
+          "stop" : 1655212683356,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "571bef61d5d78846",
+          "name" : "Keyword Log",
+          "source" : "571bef61d5d78846.html",
+          "type" : "text/html",
+          "size" : 219
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "serveRest"
+        }, {
+          "name" : "arg2",
+          "value" : "${BASE_URL}"
+        }, {
+          "name" : "arg3",
+          "value" : "verify=True"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "RequestsLibrary.POST On Session",
+        "time" : {
+          "start" : 1655212683356,
+          "stop" : 1655212683360,
+          "duration" : 4
+        },
+        "status" : "failed",
+        "statusMessage" : "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "9dbd818e7eb271a1",
+          "name" : "Keyword Log",
+          "source" : "9dbd818e7eb271a1.html",
+          "type" : "text/html",
+          "size" : 154
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "serveRest"
+        }, {
+          "name" : "arg2",
+          "value" : "/login"
+        }, {
+          "name" : "arg3",
+          "value" : "json=${body}"
+        }, {
+          "name" : "arg4",
+          "value" : "headers=${headers}"
+        }, {
+          "name" : "arg5",
+          "value" : "expected_status=any"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      }, {
+        "name" : "BuiltIn.Log",
+        "time" : {
+          "start" : 1655212683361,
+          "stop" : 1655212683361,
+          "duration" : 0
+        },
+        "status" : "failed",
+        "statusMessage" : "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${response}"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      }, {
+        "name" : "BuiltIn.Set Test Variable",
+        "time" : {
+          "start" : 1655212683361,
+          "stop" : 1655212683362,
+          "duration" : 1
+        },
+        "status" : "failed",
+        "statusMessage" : "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${response}"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${EXISTING_EMAIL}"
+      }, {
+        "name" : "arg2",
+        "value" : "${NON_EXISTING_PASSWORD}"
+      } ],
+      "stepsCount" : 6,
+      "attachmentsCount" : 4,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "BuiltIn.Should Be Equal As Numbers",
+      "time" : {
+        "start" : 1655212683363,
+        "stop" : 1655212683363,
+        "duration" : 0
+      },
+      "status" : "failed",
+      "statusMessage" : "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${response.status_code}"
+      }, {
+        "name" : "arg2",
+        "value" : "401"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "BuiltIn.Should Be Equal As Strings",
+      "time" : {
+        "start" : 1655212683364,
+        "stop" : 1655212683364,
+        "duration" : 0
+      },
+      "status" : "failed",
+      "statusMessage" : "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "${response.json()['message']}"
+      }, {
+        "name" : "arg2",
+        "value" : "${MSG_WRONG_EMAIL_OR_PASS}"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 9,
+    "attachmentsCount" : 4,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Integration-Tests"
+  }, {
+    "name" : "suite",
+    "value" : "Login"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "framework",
+    "value" : "robotframework"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "host",
+    "value" : "fv-az275-210"
+  }, {
+    "name" : "thread",
+    "value" : "default-9b1200ea-bda6-4edb-a313-f1123589815e"
+  }, {
+    "name" : "tag",
+    "value" : "@integration"
+  }, {
+    "name" : "tag",
+    "value" : "@login"
+  }, {
+    "name" : "tag",
+    "value" : "@regression"
+  }, {
+    "name" : "tag",
+    "value" : "@integration"
+  }, {
+    "name" : "tag",
+    "value" : "@login"
+  }, {
+    "name" : "tag",
+    "value" : "@regression"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 8,
+        "unknown" : 0,
+        "total" : 12
+      },
+      "items" : [ {
+        "uid" : "301249f9d188e50f",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/137//#testresult/301249f9d188e50f",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8f7ff31b80>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+        "time" : {
+          "start" : 1655169088431,
+          "stop" : 1655169089046,
+          "duration" : 615
+        }
+      }, {
+        "uid" : "bda531d0ca5497bb",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/136//#testresult/bda531d0ca5497bb",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+        "time" : {
+          "start" : 1655165268603,
+          "stop" : 1655165268618,
+          "duration" : 15
+        }
+      }, {
+        "uid" : "cc38034233c93593",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/135//#testresult/cc38034233c93593",
+        "status" : "failed",
+        "statusDetails" : "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+        "time" : {
+          "start" : 1655163905073,
+          "stop" : 1655163905091,
+          "duration" : 18
+        }
+      }, {
+        "uid" : "f2b0cf0fdbb6530e",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/133//#testresult/f2b0cf0fdbb6530e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654691311964,
+          "stop" : 1654691312080,
+          "duration" : 116
+        }
+      }, {
+        "uid" : "cd6ddce637ea0095",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/132//#testresult/cd6ddce637ea0095",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560904351,
+          "stop" : 1654560904424,
+          "duration" : 73
+        }
+      }, {
+        "uid" : "b01de076676495ad",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/130//#testresult/b01de076676495ad",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560782731,
+          "stop" : 1654560782854,
+          "duration" : 123
+        }
+      }, {
+        "uid" : "c9d467c783620daf",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/128//#testresult/c9d467c783620daf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560500114,
+          "stop" : 1654560500200,
+          "duration" : 86
+        }
+      }, {
+        "uid" : "785957d362ac06e1",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/127//#testresult/785957d362ac06e1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560397067,
+          "stop" : 1654560397189,
+          "duration" : 122
+        }
+      }, {
+        "uid" : "8684913c628215bd",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/126//#testresult/8684913c628215bd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560335057,
+          "stop" : 1654560335151,
+          "duration" : 94
+        }
+      }, {
+        "uid" : "7cbe53965feaa5d6",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/125//#testresult/7cbe53965feaa5d6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654560246112,
+          "stop" : 1654560246216,
+          "duration" : 104
+        }
+      }, {
+        "uid" : "a07a166a86391521",
+        "reportUrl" : "https://STC-TEAM-PROJECT.github.io/robot-api-stc/123//#testresult/a07a166a86391521",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654559686259,
+          "stop" : 1654559686375,
+          "duration" : 116
+        }
+      } ]
+    },
+    "tags" : [ "@integration", "@login", "@regression" ]
+  },
+  "source" : "5c803946d8ba0ddc.json",
+  "parameterValues" : [ ]
+}
