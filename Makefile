@@ -29,10 +29,10 @@ run-test-report:
 	robot -d ./logs --listener 'allure_robotframework:allure-results' -V ./env/$(ENV).yaml .
 
 run-integration-tests-ci:
-	robot -d ./logs --listener 'allure_robotframework:allure-results' -i @integration -V ./env/local.yaml ./serverest/tests/integration-tests
+	robot -d ./logs --listener 'allure_robotframework:allure-results' -i @integration_tests -V ./env/local.yaml ./serverest/tests/integration-tests
 
 run-schema-tests-ci:
-	robot -d ./logs --listener 'allure_robotframework:allure-results' -i @schema -V ./env/local.yaml ./serverest/tests/schema-tests
+	robot -d ./logs --listener 'allure_robotframework:allure-results' -i @schema_tests -V ./env/local.yaml ./serverest/tests/schema-tests
 
 allure-report:
 	allure generate allure-results --clean -o allure-report

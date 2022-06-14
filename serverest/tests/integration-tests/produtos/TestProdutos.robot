@@ -1,7 +1,7 @@
 *** Settings ***
-Resource        ../../base.robot
+Resource        ../../../base.robot
 Documentation   Product test for API
-
+Force Tags      @produtos
 
 *** Test Cases ***
 Successfully validating product

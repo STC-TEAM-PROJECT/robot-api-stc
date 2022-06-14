@@ -3,13 +3,13 @@ Library    RequestsLibrary
 Library    FakerLibrary
 Library    JsonValidator
 Library    yaml
-Resource   ./tests/integration-tests/keywords/usuarios/UsuarioKW.robot
-Resource   ./tests/integration-tests/keywords/produtos/ProdutoKW.robot
-Resource   ./tests/integration-tests/keywords/carrinhos/CarrinhoKW.robot
-Resource   ./tests/integration-tests/keywords/login/LoginKW.robot
+Resource   ${KEYWORDS}/carrinhos/keywords/CarrinhoKW.robot
+Resource   ${KEYWORDS}/login/keywords/LoginKW.robot
+Resource   ${KEYWORDS}/produtos/keywords/ProdutoKW.robot
+Resource   ${KEYWORDS}/usuarios/keywords/UsuarioKW.robot
 
 *** Variables ***
 ${BASE_URL}                             ${URL}
 
-${KEYWORDS}                             ${CURDIR}/tests/integration-tests/keywords
+${KEYWORDS}                             ${CURDIR}/tests/integration-tests
 ${SCHEMAS}                              ${CURDIR}/tests/schema-tests/schemas
