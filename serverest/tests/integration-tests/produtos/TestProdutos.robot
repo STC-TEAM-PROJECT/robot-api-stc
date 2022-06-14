@@ -30,7 +30,7 @@ Successfully validating product by Name
     Should Be Equal As Strings          ${response.json()["produtos"][0]["nome"]}        Samsung 60 polegadas
   
 Successfully validating product by Description And Name
-    [Tags]    @regression   @test
+    [Tags]    @regression
     Search Products By Parameters       nome=Samsung 60 polegadas   descricao=TV
     Should Be Equal As Strings          ${response.status_code}                          200
     Should Be Equal As Strings          ${response.json()["produtos"][0]["nome"]}        Samsung 60 polegadas
