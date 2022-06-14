@@ -11,16 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      
-      - name: Start ServeRest locally
-        run: docker run -d -p 3030:3030 paulogoncalvesbh/serverest
 
       - name: Setup project
         uses: ./.github/actions/setup
 
       - name: Run schema tests
         if: always()
-        run: make run-schema-tests-ci
+        run: ENV=dev make run-all-schema
         continue-on-error: true
         env:
           FORCE_COLOR: 2
@@ -33,20 +30,16 @@ jobs:
   
   robot_integration_tests:
     name: robot integration tests
-    needs: [robot_schema_tests]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      
-      - name: Start ServeRest locally
-        run: docker run -d -p 3030:3030 paulogoncalvesbh/serverest
 
       - name: Setup project
         uses: ./.github/actions/setup
 
       - name: Run integration tests
         if: always()
-        run: make run-integration-tests-ci
+        run: ENV=dev make run-all-integration
         continue-on-error: true
         env:
           FORCE_COLOR: 2
