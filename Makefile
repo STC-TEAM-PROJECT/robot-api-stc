@@ -17,10 +17,10 @@ run-regression:
 	robot -d ./logs -i @regression -V ./env/$(ENV).yaml .
 
 run-all-integration:
-	robot -d ./logs --listener 'allure_robotframework:allure-results' -i @integration_tests ./serverest/tests/integration-tests
+	robot -d ./logs --listener 'allure_robotframework:allure-results' -i @integration_tests -V ./env/$(ENV).yaml ./serverest/tests/integration-tests
 
 run-all-schema:
-	robot -d ./logs --listener 'allure_robotframework:allure-results' -i @schema_tests ./serverest/tests/schema-tests
+	robot -d ./logs --listener 'allure_robotframework:allure-results' -i @schema_tests -V ./env/$(ENV).yaml ./serverest/tests/schema-tests
 
 run-test:
 	robot -d ./logs -i @test -V ./env/$(ENV).yaml .

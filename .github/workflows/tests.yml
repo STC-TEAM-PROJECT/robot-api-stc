@@ -25,7 +25,7 @@ jobs:
 
       - name: Run schema tests
         if: always()
-        run: make run-all-schema
+        run: ENV=local make run-all-schema
         continue-on-error: true
         env:
           FORCE_COLOR: 2
@@ -55,7 +55,7 @@ jobs:
 
       - name: Run integration tests
         if: always()
-        run: make run-all-integration
+        run: ENV=local make run-all-integration
         continue-on-error: true
         env:
           FORCE_COLOR: 2
