@@ -15,10 +15,20 @@ jobs:
       - name: Setup project
         uses: ./.github/actions/setup
 
-      - name: Run tests
+      - name: Start ServeRest locally
+        run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
+
+      - name: Wait for 1 seconds
+        uses: jakejarvis/wait-action@master
+        with:
+          time: 1s
+
+      - name: Run schema tests
         if: always()
-        run: make run-all-schema
+        run: ENV=local make run-all-schema
         continue-on-error: true
+        env:
+          FORCE_COLOR: 2
 
       - name: Upload Allure report
         uses: actions/upload-artifact@v1
@@ -34,11 +44,21 @@ jobs:
 
       - name: Setup project
         uses: ./.github/actions/setup
+      
+      - name: Start ServeRest locally
+        run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
 
-      - name: Run tests
+      - name: Wait for 1 seconds
+        uses: jakejarvis/wait-action@master
+        with:
+          time: 1s
+
+      - name: Run integration tests
         if: always()
-        run: make run-all-integration
+        run: ENV=local make run-all-integration
         continue-on-error: true
+        env:
+          FORCE_COLOR: 2
 
       - name: Upload Allure report
         uses: actions/upload-artifact@v1
@@ -64,7 +84,7 @@ jobs:
           path: gh-pages
 
       - name: Allure report gh-actions
-        uses: simple-elf/allure-report-action@master
+        uses: simple-elf/allure-report-action@v1.6
         if: always()
         with:
           allure_results: allure-results

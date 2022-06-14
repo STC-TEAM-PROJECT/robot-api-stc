@@ -4,7 +4,7 @@ Search All Products
     ${headers}=            Create Dictionary
     ...                    content-type=application/json
 
-    Create Session         serveRest            ${URL_DEV}        verify=True
+    Create Session         serveRest            ${BASE_URL}       verify=True
     ${response}=           GET On Session       serveRest         /produtos
     ...                    headers=${headers}
     ...                    expected_status=any
@@ -18,7 +18,7 @@ Search Products By Id In The URL
     ${headers}=            Create Dictionary
     ...                    content-type=application/json
 
-    Create Session         serveRest            ${URL_DEV}        verify=True
+    Create Session         serveRest            ${BASE_URL}       verify=True
     ${response}=           GET On Session       serveRest         /produtos/${product_id}
     ...                    headers=${headers}
     ...                    expected_status=any
@@ -32,7 +32,7 @@ Search Products By Parameters
     ${headers}=            Create Dictionary
     ...                    content-type=application/json
 
-    Create Session         serveRest            ${URL_DEV}        verify=True
+    Create Session         serveRest            ${BASE_URL}       verify=True
     ${response}=           GET On Session       serveRest         /produtos
     ...                    headers=${headers}
     ...                    params=${params}&${others_params}

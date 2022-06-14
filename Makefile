@@ -8,25 +8,25 @@ install:
 	pip3 install -r requirements.txt
 
 run-serverest:
-	npx serverest -t 600000 -p 3000
+	npx serverest -t 600000 -p 3030
 
 run-all:
-	robot -d ./logs .
+	robot -d ./logs -V ./env/$(ENV).yaml .
 
 run-regression:
-	robot -d ./logs -i @regression .
+	robot -d ./logs -i @regression -V ./env/$(ENV).yaml .
 
 run-all-integration:
-	robot -d ./logs --listener 'allure_robotframework:allure-results' -i @integration ./serverest/tests/integration-tests
+	robot -d ./logs --listener 'allure_robotframework:allure-results' -i @integration_tests -V ./env/$(ENV).yaml ./serverest/tests/integration-tests
 
 run-all-schema:
-	robot -d ./logs --listener 'allure_robotframework:allure-results' -i @schema ./serverest/tests/schema-tests
+	robot -d ./logs --listener 'allure_robotframework:allure-results' -i @schema_tests -V ./env/$(ENV).yaml ./serverest/tests/schema-tests
 
 run-test:
-	robot -d ./logs -i @test .
+	robot -d ./logs -i @test -V ./env/$(ENV).yaml .
 
 run-test-report:
-	robot -d ./logs --listener 'allure_robotframework:allure-results' .
+	robot -d ./logs --listener 'allure_robotframework:allure-results' -V ./env/$(ENV).yaml .
 
 allure-report:
 	allure generate allure-results --clean -o allure-report

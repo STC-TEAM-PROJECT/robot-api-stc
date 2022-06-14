@@ -2,14 +2,14 @@
 Library    RequestsLibrary
 Library    FakerLibrary
 Library    JsonValidator
-Resource   ./tests/integration-tests/keywords/usuarios/UsuarioKW.robot
-Resource   ./tests/integration-tests/keywords/produtos/ProdutoKW.robot
-Resource   ./tests/integration-tests/keywords/carrinhos/CarrinhoKW.robot
-Resource   ./tests/integration-tests/keywords/login/LoginKW.robot
+Library    yaml
+Resource   ${KEYWORDS}/carrinhos/keywords/CarrinhoKW.robot
+Resource   ${KEYWORDS}/login/keywords/LoginKW.robot
+Resource   ${KEYWORDS}/produtos/keywords/ProdutoKW.robot
+Resource   ${KEYWORDS}/usuarios/keywords/UsuarioKW.robot
 
 *** Variables ***
-${URL_LOCAL}                            http://localhost:3000
-${URL_DEV}                              https://serverest.dev
+${BASE_URL}                             http://localhost:3000
 
-${KEYWORDS}                             ${CURDIR}/tests/integration-tests/keywords
+${KEYWORDS}                             ${CURDIR}/tests/integration-tests
 ${SCHEMAS}                              ${CURDIR}/tests/schema-tests/schemas

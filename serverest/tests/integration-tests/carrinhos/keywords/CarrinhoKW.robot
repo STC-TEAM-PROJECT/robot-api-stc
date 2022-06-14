@@ -4,7 +4,7 @@ Search All Carts
     ${headers}=            Create Dictionary
     ...                    content-type=application/json
 
-    Create Session         serveRest            ${URL_DEV}        verify=True
+    Create Session         serveRest            ${BASE_URL}        verify=True
     ${response}=           GET On Session       serveRest         /carrinhos
     ...                    headers=${headers}
     ...                    expected_status=any
