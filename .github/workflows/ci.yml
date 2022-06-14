@@ -16,11 +16,11 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Start ServeRest locally
-        run: docker run -d -p 3000 paulogoncalvesbh/serverest
+        run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
 
       - name: Run tests
         if: always()
-        run: env=local make run-all-schema
+        run: ENV=local make run-all-schema
         continue-on-error: true
 
       - name: Upload Allure report
@@ -39,11 +39,11 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Start ServeRest locally
-        run: docker run -d -p 3000 paulogoncalvesbh/serverest
+        run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest
 
       - name: Run tests
         if: always()
-        run: env=local make run-all-integration
+        run: ENV=local make run-all-integration
         continue-on-error: true
 
       - name: Upload Allure report

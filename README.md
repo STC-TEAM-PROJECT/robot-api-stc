@@ -111,43 +111,43 @@ make run-serverest
 > To run all tests:
 
 ```makefile
-env=dev make run-all
-env=local make run-all
+ENV=dev make run-all
+ENV=local make run-all
 ```
 
 > To run all regression tests:
 
 ```makefile
-env=dev make run-regression
-env=local make run-regression
+ENV=dev make run-regression
+ENV=local make run-regression
 ```
 
 > To run all integration tests:
 
 ```makefile
-env=dev make run-all-integration
-env=local make run-all-integration
+ENV=dev make run-all-integration
+ENV=local make run-all-integration
 ```
 
 > To run all schema tests:
 
 ```makefile
-env=dev make run-all-schema
-env=local make run-all-schema
+ENV=dev make run-all-schema
+ENV=local make run-all-schema
 ```
 
 > To run with the @your_tag
 
 ```makefile
-env=dev make run-test
-env=local make run-test
+ENV=dev make run-test
+ENV=local make run-test
 ```
 
 #### Tips: Run tests
 
 - You may need to open another **terminal** to run your tests.
 
-- You need to choose a environments for tests: `env=dev` or `env=local`
+- You need to choose a environments for tests: `ENV=dev` or `ENV=local`
 
 - You need to put the **@any-tag** in your **test case** or edit in makefile.
 
@@ -175,20 +175,20 @@ env=local make run-test
 > To generate the reports:
 
 ```makefile
-env=dev make run-test-report
+ENV=dev make run-test-report
 make allure-report
 
-env=local make run-test-report
+ENV=local make run-test-report
 make allure-report
 ```
 
 > To open the reports:
 
 ```makefile
-env=dev make run-test-report
+ENV=dev make run-test-report
 make allure-server
 
-env=local make run-test-report
+ENV=local make run-test-report
 make allure-server
 ```
 
