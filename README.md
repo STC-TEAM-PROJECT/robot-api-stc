@@ -3,7 +3,7 @@
 -----------------------
 
 [![SERVREST-API](https://img.shields.io/badge/API-ServeRest-brightgreen)](https://github.com/PauloGoncalvesBH/ServeRest/)
-[![ROBOT-CI](https://github.com/STC-TEAM-PROJECT/robot-api-stc/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/STC-TEAM-PROJECT/robot-api-stc/actions/workflows/ci.yml)
+[![ROBOT-CI](https://github.com/STC-TEAM-PROJECT/robot-api-stc/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/STC-TEAM-PROJECT/robot-api-stc/actions/workflows/tests.yml)
 [![REPORT-DEPLOYED](https://img.shields.io/badge/REPORT-DEPLOYED-brightgreen)](https://stc-team-project.github.io/robot-api-stc/)
 
 Repository with examples for STC team studies on automated **robotframework** **API** and **Schema** tests and other libs:
