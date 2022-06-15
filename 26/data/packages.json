@@ -1,0 +1,291 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "Successfully login",
+    "uid" : "29fd598cf6f24fae",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252358183,
+      "stop" : 1655252358267,
+      "duration" : 84
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Login with a non-exists email",
+    "uid" : "5da26de6e13c340c",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252358274,
+      "stop" : 1655252358296,
+      "duration" : 22
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Login with a non-exists email and password",
+    "uid" : "f1f3cedcf8dd1194",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252358301,
+      "stop" : 1655252358320,
+      "duration" : 19
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Login with a non-exists password",
+    "uid" : "ddf0fa0b24cf7044",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252358325,
+      "stop" : 1655252358343,
+      "duration" : 18
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Login with an invalid email",
+    "uid" : "72ad40036b8dd007",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252358348,
+      "stop" : 1655252358369,
+      "duration" : 21
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Login with just the blank email",
+    "uid" : "dfda9f155f1067b7",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252358374,
+      "stop" : 1655252358391,
+      "duration" : 17
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Login with just the blank password",
+    "uid" : "d38409a02b24c3f6",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252358396,
+      "stop" : 1655252358414,
+      "duration" : 18
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Login with a blank email and password",
+    "uid" : "50d8f30a9e29ae1",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252358419,
+      "stop" : 1655252358439,
+      "duration" : 20
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Successfully validating product",
+    "uid" : "7f5dcb1665bd804d",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252358465,
+      "stop" : 1655252358491,
+      "duration" : 26
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Successfully validating product by ID in the URL",
+    "uid" : "36f9c8706565b018",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252358495,
+      "stop" : 1655252358530,
+      "duration" : 35
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Successfully validating product by ID",
+    "uid" : "f2367331b9131767",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252358534,
+      "stop" : 1655252358551,
+      "duration" : 17
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Successfully validating product by Name",
+    "uid" : "a791517c4b318a16",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252358555,
+      "stop" : 1655252358572,
+      "duration" : 17
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Successfully validating product by Description And Name",
+    "uid" : "16ab7ed7ac288096",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252358577,
+      "stop" : 1655252358594,
+      "duration" : 17
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Unsuccessfully validating product by ID in the URL",
+    "uid" : "ca7f16dd43923fac",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252358598,
+      "stop" : 1655252358614,
+      "duration" : 16
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Unsuccessfully validating product by Name",
+    "uid" : "53c3be50e40a433f",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252358618,
+      "stop" : 1655252358635,
+      "duration" : 17
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Unsuccessfully validating product by Description",
+    "uid" : "25f09537e16b08b3",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252358640,
+      "stop" : 1655252358657,
+      "duration" : 17
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Successfully validating that the price must be a number",
+    "uid" : "71f3e83260474067",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252358666,
+      "stop" : 1655252358684,
+      "duration" : 18
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Successfully validating that the price must be an integer",
+    "uid" : "b87b26bd54e007be",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252358687,
+      "stop" : 1655252358704,
+      "duration" : 17
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Unsuccessfully validating product by Description And Name",
+    "uid" : "55c851fd92da23cf",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252358708,
+      "stop" : 1655252358725,
+      "duration" : 17
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Validate car API schema",
+    "uid" : "8ccf2978a07cf1b5",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252368450,
+      "stop" : 1655252368504,
+      "duration" : 54
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Validate products API",
+    "uid" : "f748749884b5fe97",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252368521,
+      "stop" : 1655252368547,
+      "duration" : 26
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Validate user API schema",
+    "uid" : "a470ffc12883a926",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655252368564,
+      "stop" : 1655252368587,
+      "duration" : 23
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  } ],
+  "name" : "packages"
+}
